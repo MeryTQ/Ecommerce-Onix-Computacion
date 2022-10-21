@@ -5,7 +5,7 @@
 
 body h1 {
   font-family: "Quicksand";
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
   margin: 0;
   padding: 0.5em;
@@ -33,6 +33,10 @@ body main {
 body hr {
   color: #e0d8d8;
   margin: 0.5rem; }
+
+body button, body input {
+  font-family: "Quicksand";
+  font-size: 0.8rem; }
 
 /* --------------- HEADER --------------- */
 header {
@@ -217,21 +221,32 @@ footer {
         filter: brightness(1); }
 
 main {
-  display: flex; }
+  display: grid;
+  grid-template-areas: "cat prod prod prod"; }
   main .categorias {
-    width: 10%;
-    height: 100%;
+    height: 25rem;
+    width: 16rem;
     border-radius: 10px;
     padding: 2rem;
     margin: 1rem;
-    background-color: white; }
+    background-color: white;
+    grid-area: "cat"; }
     main .categorias label {
       font-size: 0.8rem; }
+    main .categorias button {
+      border: none;
+      font-family: "Quicksand";
+      padding: 0.5rem;
+      border-radius: 0.7rem;
+      margin-top: 0.8rem;
+      background-color: orange;
+      color: black;
+      font-weight: bolder; }
   main #productos {
-    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center; }
+    justify-items: center;
+    grid-area: "prod"; }
     main #productos .productosCard {
       box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
       -webkit-box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
@@ -262,7 +277,6 @@ main {
         main #productos .productosCard div input {
           background-color: #061cb0;
           border-color: #061cb0;
-          font-family: "Quicksand";
           color: white;
           padding: 0.5rem;
           border-radius: 10px; }

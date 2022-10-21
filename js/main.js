@@ -15,8 +15,8 @@ let productosArray = []
 productosArray.push(new plantillaProductos(1, "Cooler", "Cooler Cpu Cooler Master Hyper 212 Argb 150 W",8289, "assets/Componentes/Cooler/Cooler-Master-1.png"));
 productosArray.push(new plantillaProductos(2, "Cooler", "Cooler Cpu Cooler Master MasterAir MA410M Argb 150 W", 16499, "assets/Componentes/Cooler/Cooler-Master-2.png"));
 productosArray.push(new plantillaProductos(3, "Cooler", "Cooler Cpu Cooler Master Masterair MA620M Argb 200 W", 28799, "assets/Componentes/Cooler/Cooler-Master-3.png"));
-productosArray.push(new plantillaProductos(4, "Disco", "Disco Rigido 1Tb WD Blue", 8599, "assets/Componentes/Disco rigido/Disco-Wd-1.png"));
-productosArray.push(new plantillaProductos(5, "Disco", "Disco Rigido 4Tb WB Blue", 18999, "assets/Componentes/Disco rigido/Disco-Wd-2.png"));
+productosArray.push(new plantillaProductos(4, "Almacenamiento", "Disco Rigido 1Tb WD Blue", 8599, "assets/Componentes/Disco rigido/Disco-Wd-1.png"));
+productosArray.push(new plantillaProductos(5, "Almacenamiento", "Disco Rigido 4Tb WB Blue", 18999, "assets/Componentes/Disco rigido/Disco-Wd-2.png"));
 productosArray.push(new plantillaProductos(6, "Fuente", "Fuente Thermaltake Smart 500W 80 Plus White", 9399, "assets/Componentes/Fuente/Fuente-Therma-1.png"));
 productosArray.push(new plantillaProductos(7, "Fuente", "Fuente Thermaltake Smart Rgb 600W 80 Plus White", 17749, "assets/Componentes/Fuente/Fuente-Therma-2.png"));
 productosArray.push(new plantillaProductos(8, "Fuente", "Fuente Thermaltake Smart BX1 Rgb 750 80 Plus Bronze", 25999, "assets/Componentes/Fuente/Fuente-Therma-3.png"));
@@ -27,7 +27,7 @@ productosArray.push(new plantillaProductos(12, "Motherboard", "Motherboard 1200 
 productosArray.push(new plantillaProductos(13, "Motherboard", "Motherboard 1200 11Gen - Gigabyte GA-Z590M GAMING X", 23999, "assets/Componentes/Motherboard/Mother-Giga-1.png"));
 productosArray.push(new plantillaProductos(14, "Motherboard", "Motherboard AM4 - Msi B550M PRO VDH WIFI", 26899, "assets/Componentes/Motherboard/Mother-Msi-1.png"));
 productosArray.push(new plantillaProductos(15, "Placa de video", "Placa de Video GeForce GTX 1660 6Gb Super Asus Tuf Gaming Oc Dos Cooler", 88299, "assets/Componentes/Placa de video/Video-Asus-1.png"));
-productosArray.push(new plantillaProductos(16, "Placa de video", "Placa de Video Radeon RX 6500 XT 4Gb Gigabyte Eagle", 67589, ".assets/Componentes/Placa de video/Video-Giga-1.png"));
+productosArray.push(new plantillaProductos(16, "Placa de video", "Placa de Video Radeon RX 6500 XT 4Gb Gigabyte Eagle", 67589, "assets/Componentes/Placa de video/Video-Giga-1.png"));
 productosArray.push(new plantillaProductos(17, "Placa de video", "Placa de Video LHR GeForce RTX 2070 8Gb Msi Ventus 2X OC", 177169, "assets/Componentes/Placa de video/Video-Msi-2.png"));
 productosArray.push(new plantillaProductos(18, "Procesador", "Procesador Intel Core i7 10700F 4.8 Ghz Comet Lake 1200 Sin Gpu", 59999, "assets/Componentes/Procesadores/Intel i7.png"));
 productosArray.push(new plantillaProductos(19, "Procesador", "Procesador Intel Core i9 12900KF 5.2 Ghz Alder Lake 1700 Sin Cooler Sin Gpu", 139799, "assets/Componentes/Procesadores/Intel i9.png"));
@@ -46,6 +46,11 @@ productosArray.push(new plantillaProductos(30, "Teclado", "Teclado Gamer HyperX 
 productosArray.push(new plantillaProductos(31, "Teclado", "Teclado Gamer HyperX Alloy Origins Core Tenkeyless", 16579, "assets/Perifericos/Hyperx/Teclado-Hyper-2.png"));
 productosArray.push(new plantillaProductos(32, "Teclado", "Teclado Gamer HyperX Alloy Elite 2 Rgb", 19989, "assets/Perifericos/Hyperx/Teclado-Hyper-3.png"));
 
+// ---------- VARIABLES / CONSTANTES ---------- //
+const productos = document.querySelector("#productos");
+const carritoDiv = document.querySelector(".carritoDiv");
+const carritoTitulo = document.querySelector(".carritoTitulo h2");
+const sad = document.querySelector(".sad");
 
 // ---------- GENERADOR DE PRODUCTOS/CARDS EN HTML ---------- //
 
@@ -58,18 +63,13 @@ for (const productoArray of productosArray){
         <input type="button" value="añadir" class="botonAñadir" id="${productoArray.id}">
         <p class="productoPrecio">$${productoArray.precio}</p> 
     </div>`;
-
-    const appendDiv = document.getElementById("productos");
-    appendDiv.append(productosDiv);
+    productos.append(productosDiv);
     productosDiv.classList = "productosCard wow animate__animated animate__fadeIn";
 }
 
 // ---------- AÑADIR ITEMS AL CARRITO ---------- //
 
 const botonAñadir = document.querySelectorAll(".botonAñadir");
-const carritoDiv = document.querySelector(".carritoDiv");
-const carritoTitulo = document.querySelector(".carritoTitulo h2");
-const sad = document.querySelector(".sad");
 let carrito = [];
 
 botonAñadir.forEach(btn => {
@@ -89,7 +89,6 @@ function AñadirCarrito(e){
         precio: itemPrecio,
         cantidad: 1
     }
-
     añadirItem(nuevoItem);
 }
 
@@ -197,3 +196,33 @@ if (storage){
     renderCarrito();
 }
 
+// ---------- CATEGORIAS - FILTRO ---------- //
+
+const inputFiltro = document.querySelectorAll(".filtro");
+
+// Añadir filtro//
+inputFiltro.forEach(añadir => {
+    añadir.addEventListener("click", añadirFiltro);
+    function añadirFiltro () {
+        const arrayFiltrado = productosArray.filter(e => e.tipo.includes(añadir.value));
+        productos.innerHTML = "";
+
+        for (const renderFiltro of arrayFiltrado){
+            const divFiltro = document.createElement("div");
+            divFiltro.innerHTML = `
+            <p class="productoNombre">${renderFiltro.nombre}</p> 
+            <div class="productoImgDiv"><img src="${renderFiltro.imagen}" alt="${renderFiltro.tipo}" class="productoImg"></div>
+            <div>
+                <input type="button" value="añadir" class="botonAñadir" id="${renderFiltro.id}">
+                <p class="productoPrecio">$${renderFiltro.precio}</p> 
+            </div>`;
+            productos.append(divFiltro);
+            divFiltro.classList = "productosCard wow animate__animated animate__fadeIn";
+        }
+        // añadir al carrito //
+        const carritoFiltrado = document.querySelectorAll(".botonAñadir");
+        carritoFiltrado.forEach(a => {
+        a.addEventListener("click", AñadirCarrito);
+        })
+    }
+});
