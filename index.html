@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pushbar.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <script src="https://kit.fontawesome.com/43bb772108.js" crossorigin="anonymous"></script>
+    <title>Onix Computación</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="./index.html"><img src="./assets/Layout/Logo.png" alt="Logo"></a>
+        </div>
+        <div class="buscar">
+            <div> <input type="text" placeholder="Buscar" required> </div>
+            <div class="buscar_icon"> <i class="fi fi-br-search"></i> </div>
+        </div>
+        <div class="pushbar_main_container carritoIcon">
+          <button data-pushbar-target="mypushbar1"><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
+        </div>
+    </header>
+
+      <!---------- PUSHBAR / CARRITO ---------->
+    <div data-pushbar-id="mypushbar1" data-pushbar-direction="right" class="carritoPushbar">
+      <div class="carritoTitulo">
+        <button data-pushbar-close><i class="fa-solid fa-xmark"></i></button>
+        <h2>Carrito Vacío</h2>
+      </div> <hr>
+      <div class="sad"><i class="fa-regular fa-face-sad-tear fa-xl"></i></div>
+      <div class="carritoDiv">
+          <!-- Render en js -->
+      </div>
+      <div class="total">
+        <p>TOTAL : $0</p>
+      </div>
+    </div>
+
+      <!---------- NAV ---------->
+    <nav class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav_items" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a href="./index.html">Categorías</a>
+                <a href="#">Arma tu PC</a>
+                <a href="#">PC Armadas</a>
+                <a href="#">Marcas</a>
+                <a href="#">Ayuda</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!---------- BANNER ---------->
+      <div class="banner">   
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/Layout/Banner1.jpg" class="d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/Layout/Banner2.jpg" class="d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/Layout/Banner3.jpg" class="d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/Layout/Banner4.jpg" class="d-block w-100" alt="Banner">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------- CATEGORIAS ---------->
+      <h1> PRODUCTOS </h1>
+
+    <main>
+      <div class="categorias">
+        <h2>Categorías</h2> 
+        <form action="">
+          <label for="procesador"><input type="radio" name="categoria" value="procesador">  Procesador</label> <br>
+          <label for="motherboard"><input type="radio" name="categoria" value="motherboard">  Motherboard</label> <br>
+          <label for="cooler"><input type="radio" name="categoria" value="cooler">  Cooler</label> <br>
+          <label for="ram"><input type="radio" name="categoria" value="ram">  Memoria RAM</label> <br>
+          <label for="video"><input type="radio" name="categoria" value="video">  Placa de Video</label> <br>
+          <label for="almacenamiento"><input type="radio" name="categoria" value="almacenamiento">  Almacenamiento</label> <br>
+          <label for="fuente"><input type="radio" name="categoria" value="fuente">  Fuente de poder</label> <br>
+          <label for="gabinete"><input type="radio" name="categoria" value="gabinete">  Gabinete</label> <br>
+          <label for="auriculares"><input type="radio" name="categoria" value="auriculares">  Auriculares</label> <br>
+          <label for="teclado"><input type="radio" name="categoria" value="teclado">  Teclado</label> <br>
+          <label for="mouse"><input type="radio" name="categoria" value="mouse">  Mouse</label>
+        </form>
+      </div>
+
+      <!---------- PRODUCTOS ---------->
+      <div id="productos">
+        <!-- Productos generados desde js -->
+      </div>
+
+    </main>
+
+      <!---------- FOOTER ---------->
+    <footer>
+      <div class="menu"> <!----- Menu ----->
+        <ul>
+          <li><a href="#">Categorías</a></li>
+          <li><a href="#">Arma tu PC</a></li>
+          <li><a href="#">PC Armadas</a></li>
+          <li><a href="#">Marcas</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+      </div>
+
+      <div class="marcas"> <!----- Marcas ----->
+        <div>
+          <a href="https://www.nvidia.com/es-la/" target="_blank"><img src="./assets/Layout/Footer_m_Nvidia.png" alt="nvidia"></a>
+          <a href="https://hyperx.com" target="_blank"><img src="./assets/Layout/Footer_m_Hyperx.png" alt="hyper x"></a>
+          <a href="https://www.amd.com/es" target="_blank"><img src="./assets/Layout/Footer_m_Amd.png" alt="amd"></a>
+          <a href="https://redragon.es" target="_blank"><img src="./assets/Layout/Footer_m_Redragon.png" alt="redragon"></a>
+          <a href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank"><img src="./assets/Layout/Footer_m_Intel.png" alt="intel"></a>
+          <a href="https://latam.msi.com" target="_blank"><img src="./assets/Layout/Footer_m_Msi.png" alt="msi"></a>  
+        </div> 
+      </div>
+
+      <div class="redes_logo"> <!----- Logo y redes ----->
+          <div>
+            <div class="logo">
+              <img src="./assets/Layout/Logo blanco.png" alt="Logo">
+            </div>
+            <div class="redes">
+              <img src="./assets/Layout/Footer_r_Instagram.png" alt="Instagram">
+              <img src="./assets/Layout/Footer_r_Twitch.png" alt="Twitch">
+              <img src="./assets/Layout/Footer_r_Youtube.png" alt="Youtube">
+              <img src="./assets/Layout/Footer_r_Facebook.png" alt="Facebook">
+              <img src="./assets/Layout/Footer_r_Email.png" alt="Email">
+            </div>
+          </div>
+      </div>
+    </footer>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/pushbar.js"></script>
+    <script type="text/javascript">
+      const pushbar =   new Pushbar({
+            blur:true,
+            overlay:true,
+          });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+</body>
+</html>

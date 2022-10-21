@@ -1,0 +1,61 @@
+main{
+    display: flex;
+    .categorias{
+        width: 10%;
+        height: 100%;
+        border-radius: 10px;
+        padding: 2rem; margin: 1rem;
+        background-color: white;
+        label{
+            font-size: 0.8rem;
+        }
+    }
+    #productos{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        .productosCard{
+            box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
+            -webkit-box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
+            -moz-box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
+            border-radius: 20px;
+            background-color: white;
+            width: 18rem;
+            height: 25rem;
+            margin: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .productoImgDiv{
+                height: 18rem;
+                display: flex;
+                justify-content: center;
+                background-color: white;
+                img{
+                    align-self: center;
+                    width: 60%;
+                }
+            }
+            div{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                height: 15%;
+                input{
+                    background-color: #061cb0;
+                    border-color: #061cb0;
+                    font-family: "Quicksand";
+                    color: white;
+                    padding: 0.5rem;
+                    border-radius: 10px;
+                }
+                p{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
