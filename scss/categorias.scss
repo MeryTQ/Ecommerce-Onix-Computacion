@@ -2,9 +2,10 @@ main{
     display: grid;
     grid-template-areas: 
     "cat prod prod prod";
+    padding-top: 1rem;
     .categorias{
         height: 25rem;
-        width: 16rem;
+        width: 15rem;
         border-radius: 10px;
         padding: 2rem; margin: 1rem;
         background-color: white;
@@ -34,8 +35,8 @@ main{
             -moz-box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
             border-radius: 20px;
             background-color: white;
-            width: 18rem;
-            height: 25rem;
+            width: 16rem;
+            height: 23rem;
             margin: 1rem;
             padding: 1.5rem;
             display: flex;
