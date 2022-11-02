@@ -1,0 +1,127 @@
+
+.headerCompra{
+    position: relative;
+    .buscarCompra{
+        display: none;
+    }
+}
+
+.mainCompra{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    .formBackground{
+        background-color: white;
+        display: grid;
+        width: 60rem;
+        grid-template-areas: 
+        "datos pedido"
+        "pago pago"
+        "finalizarCompra finalizarCompra"
+        ;
+        h3{
+            text-align: center;
+            padding: 10px;
+        }
+        hr{
+            color: black;
+        }
+        label{
+            font-family: "Quicksand";
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        select{
+            font-family: "Quicksand";
+            font-size: 0.8rem;
+        }
+        input{
+            width: 20rem;
+            height: 2rem;
+            border: solid 1px #c0c0c0;
+        }
+        textarea{
+            border: solid 1px #c0c0c0;
+            font-family: "Quicksand";
+            font-size: 0.8rem;
+        }
+        div{
+            padding: 0.7rem;
+            padding-left: 01rem;
+        }
+        .facturacionDatos{
+            grid-area: datos;
+            width: 30rem;
+            border-right: 1px solid gainsboro;
+        }
+        .facturacionPago{
+            grid-area: pago;
+            div{
+                display: grid;
+                grid-template-areas: 
+                "seleccione seleccione"
+                "titular vencimiento"
+                "tarjeta clave"
+                ;
+                .metodo{
+                    grid-area: seleccione;
+                    select{
+                        width: 5rem;
+                    }
+                }
+                .titular{
+                    grid-area: titular;
+                }
+                .vencimiento{
+                    grid-area: vencimiento;
+                }
+                .tarjeta{
+                    grid-area: tarjeta;
+                }
+                .clave{
+                    grid-area: clave;
+                }
+            }
+        }
+        .facturacionPedido{
+            width: 30rem;
+            grid-area: pedido;
+            .tuPedido{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                .divPedido{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    align-items: center;
+                    justify-items: center;
+                    p{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+            .totalPedido{
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 4rem;
+            }
+        }
+        .formEnviar{
+            grid-area: finalizarCompra;
+            padding: 3rem;
+            display: flex;
+            justify-content: center;
+            input{
+                width: 10rem; height: 3rem;
+                font-weight: bold;
+                background-color: orange;
+                border: 1px solid black;
+                transition: 0.5s;
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}

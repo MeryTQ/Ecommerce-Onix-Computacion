@@ -3,40 +3,40 @@
   padding: 0px;
   box-sizing: border-box; }
 
-body h1 {
-  font-family: "Quicksand";
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 0;
-  padding: 0.5em;
-  color: white;
-  background-color: #222325;
-  border-bottom: 1px solid black; }
-
-body h2 {
-  font-family: "Quicksand";
-  font-size: 1.2rem;
-  font-weight: bold; }
-
-body p {
-  font-family: "Quicksand";
-  font-size: 0.9rem; }
-
-body a {
-  font-family: "Russo One";
-  color: white;
-  font-size: 1rem; }
-
-body main {
-  background-image: url("../assets/Layout/Background.png"); }
-
-body hr {
-  color: #e0d8d8;
-  margin: 0.5rem; }
-
-body button, body input {
-  font-family: "Quicksand";
-  font-size: 0.8rem; }
+body {
+  overflow-x: hidden; }
+  body h1 {
+    font-family: "Quicksand";
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em;
+    color: white;
+    background-color: #222325;
+    border-bottom: 1px solid black; }
+  body h2 {
+    font-family: "Quicksand";
+    font-size: 1.2rem;
+    font-weight: bold; }
+  body h3 {
+    font-family: "Quicksand";
+    font-size: 1rem;
+    font-weight: bold; }
+  body p {
+    font-family: "Quicksand";
+    font-size: 0.9rem; }
+  body a {
+    font-family: "Russo One";
+    color: white;
+    font-size: 1rem; }
+  body main {
+    background-image: url("../assets/Layout/Background.png"); }
+  body hr {
+    color: #e0d8d8;
+    margin: 0.5rem; }
+  body button, body input {
+    font-family: "Quicksand";
+    font-size: 0.8rem; }
 
 /* --------------- HEADER --------------- */
 header {
@@ -55,22 +55,50 @@ header {
   header .buscar {
     padding: 5px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-self: center; }
-    header .buscar input {
+    header .buscar .buscarDiv input {
       width: 20vw;
       height: 40px;
       padding: 0 20px;
       outline: none;
       border: 1px solid silver;
-      border-radius: 30px; }
-    header .buscar .buscar_icon {
-      padding: 5px; }
+      border-radius: 5px; }
+    header .buscar .buscarDiv i {
+      padding: 10px; }
+    header .buscar .buscarLista {
+      background-color: #ffffff;
+      top: 5.7%;
+      width: 20vw;
+      align-self: flex-start;
+      position: fixed;
+      display: none; }
+      header .buscar .buscarLista ul {
+        padding: 0;
+        margin: 0; }
+        header .buscar .buscarLista ul li {
+          list-style-type: none;
+          font-family: "Quicksand";
+          padding: 10px;
+          font-size: 0.8rem; }
+          header .buscar .buscarLista ul li:hover {
+            background-color: #222325;
+            color: white; }
   header .carritoIcon {
     display: flex;
     justify-content: flex-end;
     padding-right: 4rem; }
+    header .carritoIcon .contador {
+      background-color: orange;
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 15px;
+      display: none; }
+      header .carritoIcon .contador .contadorNumero {
+        padding: 3px;
+        text-align: center;
+        font-weight: 500; }
     header .carritoIcon button {
       background-color: white;
       border: 0px; }
@@ -220,11 +248,11 @@ footer {
       footer .redes_logo div .redes img:hover {
         filter: brightness(1); }
 
-main {
+.main {
   display: grid;
   grid-template-areas: "cat prod prod prod";
   padding-top: 1rem; }
-  main .categorias {
+  .main .categorias {
     height: 25rem;
     width: 15rem;
     border-radius: 10px;
@@ -232,9 +260,9 @@ main {
     margin: 1rem;
     background-color: white;
     grid-area: "cat"; }
-    main .categorias label {
+    .main .categorias label {
       font-size: 0.8rem; }
-    main .categorias button {
+    .main .categorias button {
       border: none;
       font-family: "Quicksand";
       padding: 0.5rem;
@@ -243,43 +271,151 @@ main {
       background-color: orange;
       color: black;
       font-weight: bolder; }
-  main #productos {
+  .main #productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     grid-area: "prod"; }
-    main #productos .productosCard {
+    .main #productos .productosCard {
       box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
       -webkit-box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
       -moz-box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
       border-radius: 20px;
       background-color: white;
-      width: 16rem;
-      height: 23rem;
+      width: 68%;
+      height: 80%;
       margin: 1rem;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
       text-align: center; }
-      main #productos .productosCard .productoImgDiv {
+      .main #productos .productosCard .productoImgDiv {
         height: 18rem;
         display: flex;
         justify-content: center;
         background-color: white; }
-        main #productos .productosCard .productoImgDiv img {
+        .main #productos .productosCard .productoImgDiv img {
           align-self: center;
           width: 60%; }
-      main #productos .productosCard div {
+      .main #productos .productosCard div {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
         height: 15%; }
-        main #productos .productosCard div input {
+        .main #productos .productosCard div input {
           background-color: #061cb0;
           border-color: #061cb0;
           color: white;
           padding: 0.5rem;
           border-radius: 10px; }
-        main #productos .productosCard div p {
+        .main #productos .productosCard div p {
           font-weight: bold; }
+
+@media screen and (max-width: 480px) {
+  main {
+    display: flex;
+    flex-direction: column; }
+    main #productos {
+      display: flex;
+      flex-direction: column; } }
+
+@media screen and (max-width: 480px) {
+  footer {
+    display: flex;
+    flex-direction: column; }
+    footer .marcas div {
+      display: flex;
+      flex-direction: column; } }
+
+.headerCompra {
+  position: relative; }
+  .headerCompra .buscarCompra {
+    display: none; }
+
+.mainCompra {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem; }
+  .mainCompra .formBackground {
+    background-color: white;
+    display: grid;
+    width: 60rem;
+    grid-template-areas: "datos pedido" "pago pago" "finalizarCompra finalizarCompra"; }
+    .mainCompra .formBackground h3 {
+      text-align: center;
+      padding: 10px; }
+    .mainCompra .formBackground hr {
+      color: black; }
+    .mainCompra .formBackground label {
+      font-family: "Quicksand";
+      font-weight: bold;
+      font-size: 0.8rem; }
+    .mainCompra .formBackground select {
+      font-family: "Quicksand";
+      font-size: 0.8rem; }
+    .mainCompra .formBackground input {
+      width: 20rem;
+      height: 2rem;
+      border: solid 1px #c0c0c0; }
+    .mainCompra .formBackground textarea {
+      border: solid 1px #c0c0c0;
+      font-family: "Quicksand";
+      font-size: 0.8rem; }
+    .mainCompra .formBackground div {
+      padding: 0.7rem;
+      padding-left: 01rem; }
+    .mainCompra .formBackground .facturacionDatos {
+      grid-area: datos;
+      width: 30rem;
+      border-right: 1px solid gainsboro; }
+    .mainCompra .formBackground .facturacionPago {
+      grid-area: pago; }
+      .mainCompra .formBackground .facturacionPago div {
+        display: grid;
+        grid-template-areas: "seleccione seleccione" "titular vencimiento" "tarjeta clave"; }
+        .mainCompra .formBackground .facturacionPago div .metodo {
+          grid-area: seleccione; }
+          .mainCompra .formBackground .facturacionPago div .metodo select {
+            width: 5rem; }
+        .mainCompra .formBackground .facturacionPago div .titular {
+          grid-area: titular; }
+        .mainCompra .formBackground .facturacionPago div .vencimiento {
+          grid-area: vencimiento; }
+        .mainCompra .formBackground .facturacionPago div .tarjeta {
+          grid-area: tarjeta; }
+        .mainCompra .formBackground .facturacionPago div .clave {
+          grid-area: clave; }
+    .mainCompra .formBackground .facturacionPedido {
+      width: 30rem;
+      grid-area: pedido; }
+      .mainCompra .formBackground .facturacionPedido .tuPedido {
+        display: flex;
+        flex-direction: column;
+        padding: 0; }
+        .mainCompra .formBackground .facturacionPedido .tuPedido .divPedido {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          align-items: center;
+          justify-items: center; }
+          .mainCompra .formBackground .facturacionPedido .tuPedido .divPedido p {
+            font-size: 0.8rem; }
+      .mainCompra .formBackground .facturacionPedido .totalPedido {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 4rem; }
+    .mainCompra .formBackground .formEnviar {
+      grid-area: finalizarCompra;
+      padding: 3rem;
+      display: flex;
+      justify-content: center; }
+      .mainCompra .formBackground .formEnviar input {
+        width: 10rem;
+        height: 3rem;
+        font-weight: bold;
+        background-color: orange;
+        border: 1px solid black;
+        transition: 0.5s; }
+        .mainCompra .formBackground .formEnviar input:hover {
+          color: white; }

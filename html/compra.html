@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pushbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <script src="https://kit.fontawesome.com/43bb772108.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Onix Computación | Finalizar compra</title>
+</head>
+<body>
+    <header class="headerCompra">
+        <div>
+            <a href="../index.html"><img src="../assets/Layout/Logo.png" alt="Logo"></a>
+        </div>
+        <div class="buscar"> <!----- Buscador ----->
+            <div class="buscarCompra"> 
+              <input type="text" id="buscador" placeholder="Buscar..."> 
+              <i class="fa-solid fa-magnifying-glass"></i> 
+            </div>
+        </div>
+        <div class="carritoIcon">
+          <button data-pushbar-target="mypushbar1"><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
+        </div>
+    </header>
+
+    <!---------- NAV ---------->
+    <nav class="navbar navbar-expand-lg p-0">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav_items" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a href="../index.html">Productos</a>
+                <a href="#">Arma tu PC</a>
+                <a href="#">PC Armadas</a>
+                <a href="#">Marcas</a>
+                <a href="#">Ayuda</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+        <!---------- BANNER ---------->
+      <div class="banner">   
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../assets/Layout/Banner1.jpg" class="d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/Layout/Banner2.jpg" class="d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/Layout/Banner3.jpg" class="d-block w-100" alt="Banner">
+            </div>
+            <div class="carousel-item">
+              <img src="../assets/Layout/Banner4.jpg" class="d-block w-100" alt="Banner">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------- FINALIZAR COMPRA ---------->
+      <h1>FINALIZAR COMPRA</h1>
+
+      <main class="mainCompra">
+        <form action="" id="formFacturacion">
+          <div class="formBackground">
+          <!----- facturacion detalles ----->
+            <div class="facturacionDatos"> <hr> 
+              <h3>Datos de facturación</h3> <hr> 
+              <div>
+                  <label for="nombre">Nombre:</label> <br>
+                  <input type="text" id="nombre" value="Coder" required >
+              </div>
+              <div>
+                  <label for="apellidos">Apellidos</label> <br> 
+                  <input type="text" id="apellidos" value="House" required> 
+              </div>
+              <div>
+                  <label for="pais">Pais / región</label> <br>
+                  <select id="pais" required>
+                    <option></option>
+                    <option value="argentina" selected>Argentina</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="bolivia">Bolivia</option>
+                    <option value="chile">Chile</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="costa rica">Costa Rica</option>
+                    <option value="cuba">Cuba</option>
+                    <option value="ecuador">Ecuador</option>
+                    <option value="el salvador">El Salvador</option>
+                    <option value="guatemala">Guatemala</option>
+                  </select>
+              </div>
+              <div>
+                  <label for="telefono">Teléfono</label> <br> 
+                  <input type="text" id="telefono" value="123456789" required>
+              </div>
+              <div>
+                  <label for="email">Email</label> <br>
+                  <input type="text" id="email" value="email@hotmail.com" required>
+              </div>
+              <div>
+                  <label for="direccion">Dirección</label> <br>
+                  <input type="text" id="direccion" value="Calle falsa 123" required>
+              </div>
+              <div>
+                <label for="especificaciones">Especificaciones</label> <br>
+                <textarea id="especificaciones" cols="49" rows="4"></textarea>
+              </div> <br>
+            </div>
+
+            <!----- Facturacion Pedido ----->
+            <div class="facturacionPedido"> <hr>
+                <h3>Tu pedido</h3> <hr>
+                <div class="tuPedido">
+                  <!-- Render en compra.js -->
+                </div>
+                <div class="totalPedido">
+
+                </div>
+            </div>
+
+            <div class="facturacionPago"> <hr>
+              <!----- Facturacion pago ----->
+              <h3>Metodo de pago</h3> <hr>
+              <div>
+                <div class="metodo">
+                  <label for="metodo">Seleccione un método de pago</label> <br>
+                  <select id="metodo" required>
+                    <option></option>
+                    <option value="credito" class="metodoOption" selected>Crédito</option>
+                    <option value="efectivo" class="metodoOption">Efectivo</option>
+                    <option value="debito" class="metodoOption">Débito</option>
+                  </select>
+                </div>
+                <div class="titular">
+                  <label for="titular">Titular</label> <br>
+                  <input type="text" id="titular" class="pagoInput" value="CoderHouse" required>
+                </div>
+                <div class="tarjeta">
+                  <label for="tarjeta">Número de tarjeta</label> <br>
+                  <input type="text" id="tarjeta" class="pagoInput" value="123456789" required>
+                </div>
+                <div class="vencimiento">
+                  <label for="vencimiento">Válida hasta</label> <br>
+                  <input type="text" id="vencimiento" class="pagoInput" placeholder="mm/aa" value="00/00" required>
+                </div>
+                <div class="clave">
+                  <label for="clave">CVV</label> <br>
+                  <input type="password" id="clave" class="pagoInput" value="123" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="formEnviar">
+              <label for="finalizarCompra"></label>
+              <input type="submit" id="finalizarCompra" value="Finalizar compra" form="formFacturacion">
+            </div>
+          </div>
+        </form>
+      </main>
+
+
+
+      <footer>
+        <div class="menu"> <!----- Menu ----->
+          <ul>
+            <li><a href="#">Categorías</a></li>
+            <li><a href="#">Arma tu PC</a></li>
+            <li><a href="#">PC Armadas</a></li>
+            <li><a href="#">Marcas</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </div>
+  
+        <div class="marcas"> <!----- Marcas ----->
+          <div>
+            <a href="https://www.nvidia.com/es-la/" target="_blank"><img src="../assets/Layout/Footer_m_Nvidia.png" alt="nvidia"></a>
+            <a href="https://hyperx.com" target="_blank"><img src="../assets/Layout/Footer_m_Hyperx.png" alt="hyper x"></a>
+            <a href="https://www.amd.com/es" target="_blank"><img src="../assets/Layout/Footer_m_Amd.png" alt="amd"></a>
+            <a href="https://redragon.es" target="_blank"><img src="../assets/Layout/Footer_m_Redragon.png" alt="redragon"></a>
+            <a href="https://www.intel.com/content/www/us/en/homepage.html" target="_blank"><img src="../assets/Layout/Footer_m_Intel.png" alt="intel"></a>
+            <a href="https://latam.msi.com" target="_blank"><img src="../assets/Layout/Footer_m_Msi.png" alt="msi"></a>  
+          </div> 
+        </div>
+  
+        <div class="redes_logo"> <!----- Logo y redes ----->
+            <div>
+              <div class="logo">
+                <img src="../assets/Layout/Logo blanco.png" alt="Logo">
+              </div>
+              <div class="redes">
+                <img src="../assets/Layout/Footer_r_Instagram.png" alt="Instagram">
+                <img src="../assets/Layout/Footer_r_Twitch.png" alt="Twitch">
+                <img src="../assets/Layout/Footer_r_Youtube.png" alt="Youtube">
+                <img src="../assets/Layout/Footer_r_Facebook.png" alt="Facebook">
+                <img src="../assets/Layout/Footer_r_Email.png" alt="Email">
+              </div>
+            </div>
+        </div>
+      </footer>
+
+    <script src="../js/compra.js"></script>
+    <script src="../js/pushbar.js"></script>
+    <script type="text/javascript">
+      const pushbar =   new Pushbar({
+            blur:true,
+            overlay:true,
+          });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="../js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>

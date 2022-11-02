@@ -1,0 +1,23 @@
+@media screen and (max-width:480px){
+    main{
+        display: flex;
+        flex-direction: column;
+        #productos{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    footer{
+        display: flex;
+        flex-direction: column;
+        .marcas{
+            div{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

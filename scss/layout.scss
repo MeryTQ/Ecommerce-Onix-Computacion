@@ -18,6 +18,11 @@ body{
         font-size: 1.2rem;
         font-weight: bold;
     }
+    h3{
+        font-family: "Quicksand";
+        font-size: 1rem;
+        font-weight: bold;
+    }
     p{
         font-family: "Quicksand";
         font-size: 0.9rem;
@@ -38,6 +43,7 @@ body{
         font-family: "Quicksand";
         font-size: 0.8rem;
     }
+    overflow-x: hidden;
 }
 
 
@@ -59,25 +65,59 @@ header{
     .buscar{
         padding: 5px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-self: center;
-        input{
-            width: 20vw;
-            height: 40px;
-            padding: 0 20px;
-            outline: none;
-            border: 1px solid silver;
-            border-radius: 30px; 
+        .buscarDiv{
+            input{
+                width: 20vw;
+                height: 40px;
+                padding: 0 20px;
+                outline: none;
+                border: 1px solid silver;
+                border-radius: 5px; 
+            }
+            i{
+                padding: 10px;
+            }
         }
-        .buscar_icon{
-            padding: 5px;
+        .buscarLista{
+            background-color: #ffffff;
+            top: 5.7%;
+            width: 20vw;
+            align-self: flex-start;
+            position: fixed;
+            display: none;
+            ul{
+                padding: 0; margin: 0;
+                li{
+                    list-style-type: none;
+                    font-family: "Quicksand";
+                    padding: 10px;
+                    font-size: 0.8rem;
+                    &:hover{
+                        background-color: #222325;
+                        color: white;
+                    }
+                }
+            }
         }
     }
     .carritoIcon{
         display: flex;
         justify-content: flex-end;
         padding-right: 4rem;
+        .contador{
+            background-color: orange;
+            height: 1.5rem; width: 1.5rem;
+            border-radius: 15px;
+            display: none;
+            .contadorNumero{
+                padding: 3px;
+                text-align: center;
+                font-weight: 500;
+            }
+        }
         button{
             background-color: white;
             border: 0px;
@@ -177,11 +217,6 @@ header{
         }
     }
 }
-
-
-
-
-
 
 /* --------------- NAV --------------- */
 nav{

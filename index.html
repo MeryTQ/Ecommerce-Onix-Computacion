@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <script src="https://kit.fontawesome.com/43bb772108.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Onix Computación</title>
 </head>
 <body>
@@ -19,11 +20,42 @@
         <div>
             <a href="./index.html"><img src="./assets/Layout/Logo.png" alt="Logo"></a>
         </div>
-        <div class="buscar">
-            <div> <input type="text" placeholder="Buscar" required> </div>
-            <div class="buscar_icon"> <i class="fi fi-br-search"></i> </div>
+        <div class="buscar"> <!----- Buscador ----->
+            <div class="buscarDiv"> 
+              <input type="text" id="buscador" placeholder="Buscar..."> 
+              <i class="fa-solid fa-magnifying-glass"></i> 
+            </div>
+            <div class="buscarLista">
+              <ul>
+                <li class="articulo">Cooler</li>
+                <li class="articulo">Almacenamiento</li>
+                <li class="articulo">Disco rígido</li>
+                <li class="articulo">Fuente de poder</li>
+                <li class="articulo">Gabinete</li>
+                <li class="articulo">Motherboard</li>
+                <li class="articulo">Placa de video</li>
+                <li class="articulo">Procesador</li>
+                <li class="articulo">Ram</li>
+                <li class="articulo">Mouse</li>
+                <li class="articulo">Teclado</li>
+                <li class="articulo">Auriculares</li>
+                <li class="articulo">Cooler Master</li>
+                <li class="articulo">WD</li>
+                <li class="articulo">Thermaltake</li>
+                <li class="articulo">Asus</li>
+                <li class="articulo">Gigabyte</li>
+                <li class="articulo">Intel</li>
+                <li class="articulo">Amd</li>
+                <li class="articulo">Msi</li>
+                <li class="articulo">Kingston Fury</li>
+                <li class="articulo">HyperX</li>
+              </ul>
+            </div>
         </div>
         <div class="pushbar_main_container carritoIcon">
+          <div class="contador">
+            
+          </div>
           <button data-pushbar-target="mypushbar1"><i class="fa-solid fa-cart-shopping fa-2xl"></i></button>
         </div>
     </header>
@@ -32,7 +64,7 @@
     <div data-pushbar-id="mypushbar1" data-pushbar-direction="right" class="carritoPushbar">
       <div class="carritoTitulo">
         <button data-pushbar-close><i class="fa-solid fa-xmark"></i></button>
-        <h2>Carrito Vacío</h2>
+        <h2> Carrito vacío </h2>
       </div> <hr>
       <div class="sad"><i class="fa-regular fa-face-sad-tear fa-xl"></i></div>
       <div class="carritoDiv">
@@ -84,7 +116,7 @@
       <!---------- CATEGORIAS ---------->
       <h1> PRODUCTOS </h1>
 
-    <main>
+    <main class="main">
       <div class="categorias">
         <h2>Categorías</h2> 
         <form action="">
@@ -163,5 +195,6 @@
     <script>
       new WOW().init();
     </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>
