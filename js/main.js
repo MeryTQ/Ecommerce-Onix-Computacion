@@ -8,7 +8,7 @@ const itemTotal = document.querySelector(".total");
 
 // ---------- GENERADOR DE PRODUCTOS/CARDS EN HTML ---------- //
 
-fetch("../json/data.json")
+fetch("./json/data.json")
 .then((res) => res.json())
 .then((data) => {
     for (const productoData of data){
