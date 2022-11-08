@@ -22,7 +22,7 @@
 </head>
 <body>
     <header>
-        <div>
+        <div class="logoHeader">
             <a href="./index.html"><img src="./assets/Layout/Logo.png" alt="Logo"></a>
         </div>
         <div class="buscar"> <!----- Buscador ----->
@@ -122,21 +122,26 @@
       <h1> PRODUCTOS </h1>
 
     <main class="main">
-      <div class="categorias">
-        <h2>Categorías</h2> 
-        <form action="">
-          <label for="procesador"><input class="filtro" type="radio" name="categoria" value="Procesador"> Procesador </label> <br>
-          <label for="motherboard"><input class="filtro" type="radio" name="categoria" value="Motherboard"> Motherboard </label> <br>
-          <label for="cooler"><input class="filtro" type="radio" name="categoria" value="Cooler"> Cooler </label> <br>
-          <label for="ram"><input class="filtro" type="radio" name="categoria" value="Ram"> Memoria RAM </label> <br>
-          <label for="video"><input class="filtro" type="radio" name="categoria" value="video"> Placa de Video </label> <br>
-          <label for="almacenamiento"><input class="filtro" type="radio" name="categoria" value="Almacenamiento"> Almacenamiento </label> <br>
-          <label for="fuente"><input class="filtro" type="radio" name="categoria" value="Fuente"> Fuente de poder </label> <br>
-          <label for="gabinete"><input class="filtro" type="radio" name="categoria" value="Gabinete"> Gabinete </label> <br>
-          <label for="auriculares"><input class="filtro" type="radio" name="categoria" value="Auriculares"> Auriculares </label> <br>
-          <label for="teclado"><input class="filtro" type="radio" name="categoria" value="Teclado"> Teclado </label> <br>
-          <label for="mouse"><input class="filtro" type="radio" name="categoria" value="Mouse"> Mouse </label> <br>
-          <button>Limpiar filtro</button>
+      <div class="mainDiv">
+        <div class="categorias">
+          <h2>Categorías</h2> 
+          <form action="">
+            <div class="categoriasLabel">
+              <label for="procesador"><input class="filtro" type="radio" name="categoria" value="Procesador"> Procesador </label> <br>
+              <label for="motherboard"><input class="filtro" type="radio" name="categoria" value="Motherboard"> Motherboard </label> <br>
+              <label for="cooler"><input class="filtro" type="radio" name="categoria" value="Cooler"> Cooler </label> <br>
+              <label for="ram"><input class="filtro" type="radio" name="categoria" value="Ram"> Memoria RAM </label> <br>
+              <label for="video"><input class="filtro" type="radio" name="categoria" value="video"> Placa de Video </label> <br>
+              <label for="almacenamiento"><input class="filtro" type="radio" name="categoria" value="Almacenamiento"> Almacenamiento </label> <br>
+              <label for="fuente"><input class="filtro" type="radio" name="categoria" value="Fuente"> Fuente de poder </label> <br>
+              <label for="gabinete"><input class="filtro" type="radio" name="categoria" value="Gabinete"> Gabinete </label> <br>
+              <label for="auriculares"><input class="filtro" type="radio" name="categoria" value="Auriculares"> Auriculares </label> <br>
+              <label for="teclado"><input class="filtro" type="radio" name="categoria" value="Teclado"> Teclado </label> <br>
+              <label for="mouse"><input class="filtro" type="radio" name="categoria" value="Mouse"> Mouse </label> <br>
+          </div>
+          <div>
+            <button>Limpiar filtro</button>
+          </div>
         </form>
       </div>
 
@@ -145,18 +150,20 @@
         <!-- Productos generados desde js -->
       </div>
 
+    </div>
+
     </main>
 
       <!---------- FOOTER ---------->
     <footer>
       <div class="menu"> <!----- Menu ----->
-        <ul>
-          <li><a href="#">Categorías</a></li>
-          <li><a href="#">Arma tu PC</a></li>
-          <li><a href="#">PC Armadas</a></li>
-          <li><a href="#">Marcas</a></li>
-          <li><a href="#">Ayuda</a></li>
-        </ul>
+        <div>
+          <a href="#">Categorías</a>
+          <a href="#">Arma tu PC</a>
+          <a href="#">PC Armadas</a>
+          <a href="#">Marcas</a>
+          <a href="#">Ayuda</a>
+        </div>
       </div>
 
       <div class="marcas"> <!----- Marcas ----->
@@ -176,11 +183,11 @@
               <img src="./assets/Layout/Logo blanco.png" alt="Logo">
             </div>
             <div class="redes">
-              <img src="./assets/Layout/Footer_r_Instagram.png" alt="Instagram">
-              <img src="./assets/Layout/Footer_r_Twitch.png" alt="Twitch">
-              <img src="./assets/Layout/Footer_r_Youtube.png" alt="Youtube">
-              <img src="./assets/Layout/Footer_r_Facebook.png" alt="Facebook">
-              <img src="./assets/Layout/Footer_r_Email.png" alt="Email">
+              <a href="#" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+              <a href="#" target="_blank"><i class="fa-brands fa-twitch fa-lg"></i></a>
+              <a href="#" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
+              <a href="#" target="_blank"><i class="fa-brands fa-square-facebook fa-lg"></i></a>
+              <a href="#" target="_blank"><i class="fa-regular fa-envelope fa-lg"></i></a>
             </div>
           </div>
       </div>

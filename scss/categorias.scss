@@ -1,21 +1,17 @@
-.main{
+.main>.mainDiv{
     display: grid;
     grid-template-areas: 
-    "cat prod prod prod";
-    padding-top: 1rem;
+    "cat prod prod prod prod";
+    padding: 4rem 1rem 4rem 1rem;
     .categorias{
-        height: 25rem;
+        height: 25.5rem;
         width: 15rem;
         border-radius: 10px;
         padding: 2rem; margin: 1rem;
         background-color: white;
-        grid-area: "cat";
-        label{
-            font-size: 0.8rem;
-        }
+        grid-area: cat;
         button{
             border: none;
-            font-family: "Quicksand";
             padding: 0.5rem;
             border-radius: 0.7rem;
             margin-top: 0.8rem;
@@ -26,19 +22,19 @@
     }
     #productos{
         display: grid;
+        grid-area: prod;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: center;
-        grid-area: "prod";
+        justify-items: flex-start;
+        grid-row-gap: 1rem;
         .productosCard{
             box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
             -webkit-box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
             -moz-box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
             border-radius: 20px;
             background-color: white;
-            width: 68%;
-            height: 80%;
-            margin: 1rem;
-            padding: 1.5rem;
+            width: 16rem; height: 20rem;
+            margin: 1rem 0 1rem 0;
+            padding: 1.3rem;
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -49,15 +45,17 @@
                 background-color: white;
                 img{
                     align-self: center;
-                    width: 60%;
+                    width: 7rem;
                 }
             }
             div{
                 display: flex;
                 flex-direction: row;
-                align-items: flex-end;
+                align-items: center;
                 justify-content: space-between;
-                height: 15%;
+                .productoPrecio{
+                    margin: 0;
+                }
                 input{
                     background-color: #061cb0;
                     border-color: #061cb0;
@@ -71,4 +69,5 @@
             }
         }
     }
+    
 }

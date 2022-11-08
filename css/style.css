@@ -3,45 +3,48 @@
   padding: 0px;
   box-sizing: border-box; }
 
-body {
-  overflow-x: hidden; }
-  body h1 {
-    font-family: "Quicksand";
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0;
-    padding: 0.5em;
-    color: white;
-    background-color: #222325;
-    border-bottom: 1px solid black; }
-  body h2 {
-    font-family: "Quicksand";
-    font-size: 1.2rem;
-    font-weight: bold; }
-  body h3 {
-    font-family: "Quicksand";
-    font-size: 1rem;
-    font-weight: bold; }
-  body p {
-    font-family: "Quicksand";
-    font-size: 0.9rem; }
-  body a {
-    font-family: "Russo One";
-    color: white;
-    font-size: 1rem; }
-  body main {
-    background-image: url("../assets/Layout/Background.png"); }
-  body hr {
-    color: #e0d8d8;
-    margin: 0.5rem; }
-  body button, body input {
-    font-family: "Quicksand";
-    font-size: 0.8rem; }
+body h1 {
+  font-family: "Quicksand";
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0.8rem;
+  color: white;
+  background-color: #222325;
+  border-bottom: 1px solid black; }
+
+body h2 {
+  font-family: "Quicksand";
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+body h3 {
+  font-family: "Quicksand";
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center; }
+
+body p, body button, body input, body label, body select, body li {
+  font-family: "Quicksand";
+  font-size: 0.8rem; }
+
+body a {
+  font-family: "Russo One";
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none; }
+
+body main {
+  background-image: url("../assets/Layout/Background.png"); }
+
+body hr {
+  color: #e0d8d8;
+  margin: 0.5rem; }
 
 /* --------------- HEADER --------------- */
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   background-color: #ffffff;
   align-items: center;
   padding: 0.5rem;
@@ -50,26 +53,19 @@ header {
   top: 0;
   z-index: 1; }
   header img {
-    width: 15rem;
-    padding-left: 4rem; }
+    width: 13rem;
+    padding-left: 3rem; }
   header .buscar {
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center; }
-    header .buscar .buscarDiv input {
+    padding: 5px; }
+    header .buscar .buscarDiv > input {
       width: 20vw;
-      height: 40px;
-      padding: 0 20px;
-      outline: none;
+      height: 2.3rem;
+      padding: 0 10px;
       border: 1px solid silver;
       border-radius: 5px; }
-    header .buscar .buscarDiv i {
-      padding: 10px; }
     header .buscar .buscarLista {
       background-color: #ffffff;
-      top: 5.7%;
+      top: 3.1rem;
       width: 20vw;
       align-self: flex-start;
       position: fixed;
@@ -79,16 +75,13 @@ header {
         margin: 0; }
         header .buscar .buscarLista ul li {
           list-style-type: none;
-          font-family: "Quicksand";
-          padding: 10px;
-          font-size: 0.8rem; }
+          padding: 10px; }
           header .buscar .buscarLista ul li:hover {
             background-color: #222325;
             color: white; }
   header .carritoIcon {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 4rem; }
+    padding-right: 3rem; }
     header .carritoIcon .contador {
       background-color: orange;
       height: 1.5rem;
@@ -133,43 +126,39 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
     color: white;
-    padding-bottom: 1rem;
-    padding-top: 1rem; }
+    padding: 1rem 0 1rem 0; }
     .carritoPushbar .carritoDiv .carritoItems img {
       justify-self: center;
       align-self: center; }
     .carritoPushbar .carritoDiv .carritoItems p {
-      font-size: 0.7rem;
       justify-self: center; }
     .carritoPushbar .carritoDiv .carritoItems input {
-      width: 2rem;
-      font-size: 0.8rem; }
+      width: 2rem; }
     .carritoPushbar .carritoDiv .carritoItems button {
       border: none;
       background-color: #222325; }
       .carritoPushbar .carritoDiv .carritoItems button i {
         background-color: #f81818;
-        padding: 7px 4px 7px 4px;
+        padding: 7px 4px 5px 4px;
         border-radius: 5px; }
   .carritoPushbar .total {
     color: white;
-    margin: 2rem 0 0 2rem;
+    margin: 2rem;
     display: flex; }
-    .carritoPushbar .total P {
+    .carritoPushbar .total p {
       width: 50%; }
     .carritoPushbar .total div {
       width: 50%;
       display: flex;
       justify-content: flex-end; }
       .carritoPushbar .total div input {
-        background-color: #10c254;
+        background-color: #10c237;
         color: #000000;
         border: none;
-        padding: 0rem 0.8rem 0rem 0.8rem;
-        border-radius: 0.5rem;
-        margin-right: 3rem;
-        font-size: 0.9rem;
-        height: 2.5rem;
+        padding: 0rem 0.6rem 0rem 0.6rem;
+        border-radius: 0.7rem;
+        font-weight: bold;
+        height: 2.2rem;
         transition: 0.5s; }
         .carritoPushbar .total div input:hover {
           color: white; }
@@ -177,14 +166,20 @@ header {
 /* --------------- NAV --------------- */
 nav {
   background-color: #222325; }
+  nav .navbar-toggler:focus {
+    box-shadow: 0 0 0; }
+  nav .navbar-toggler-icon {
+    width: 1.5rem; }
+  nav .navbar-toggler {
+    border: none;
+    padding: 0.1rem; }
   nav .nav_items {
     justify-content: center; }
     nav .nav_items a {
       color: white;
       margin: 0 30px 0 30px;
       padding: 14px 0px 0px 0px;
-      position: relative;
-      text-decoration: none; }
+      position: relative; }
       nav .nav_items a::after {
         content: "";
         margin-top: 10px;
@@ -203,22 +198,23 @@ nav {
 /* --------------- FOOTER --------------- */
 footer {
   background-color: #222325;
-  height: 10em;
-  width: 100%;
+  height: 100%;
+  padding: 2rem;
   display: grid;
   grid-template-areas: "menu marcas marcas redes";
   align-items: center; }
   footer .menu {
     grid-area: menu; }
-    footer .menu ul {
+    footer .menu div {
       padding: 0;
       margin: 0;
-      margin-left: 3em; }
-      footer .menu ul a {
-        text-decoration: none;
-        color: white; }
-        footer .menu ul a:hover {
-          color: white; }
+      display: flex;
+      flex-direction: column; }
+      footer .menu div a {
+        color: white;
+        transition: 0.4s; }
+        footer .menu div a:hover {
+          color: orange; }
   footer .marcas {
     grid-area: marcas;
     justify-self: center; }
@@ -231,102 +227,173 @@ footer {
         padding: 2em; }
   footer .redes_logo {
     grid-area: redes;
-    justify-self: flex-end;
-    margin-right: 3em; }
+    justify-self: flex-end; }
     footer .redes_logo div .logo {
       display: flex;
       justify-content: center; }
       footer .redes_logo div .logo img {
-        width: 10em;
+        width: 11rem;
         padding-bottom: 0.6em; }
-    footer .redes_logo div .redes img {
-      width: 3em;
-      padding: 0.3em;
-      filter: brightness(0.5);
-      border-radius: 100%;
-      transition: 0.5s; }
-      footer .redes_logo div .redes img:hover {
-        filter: brightness(1); }
+    footer .redes_logo div .redes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      justify-items: center; }
+      footer .redes_logo div .redes i {
+        transition: 0.4s; }
+        footer .redes_logo div .redes i:hover {
+          transform: scale(1.1);
+          color: white;
+          box-shadow: 1px 1px 16px 2px white; }
 
-.main {
+.main > .mainDiv {
   display: grid;
-  grid-template-areas: "cat prod prod prod";
-  padding-top: 1rem; }
-  .main .categorias {
-    height: 25rem;
+  grid-template-areas: "cat prod prod prod prod";
+  padding: 4rem 1rem 4rem 1rem; }
+  .main > .mainDiv .categorias {
+    height: 25.5rem;
     width: 15rem;
     border-radius: 10px;
     padding: 2rem;
     margin: 1rem;
     background-color: white;
-    grid-area: "cat"; }
-    .main .categorias label {
-      font-size: 0.8rem; }
-    .main .categorias button {
+    grid-area: cat; }
+    .main > .mainDiv .categorias button {
       border: none;
-      font-family: "Quicksand";
       padding: 0.5rem;
       border-radius: 0.7rem;
       margin-top: 0.8rem;
       background-color: orange;
       color: black;
       font-weight: bolder; }
-  .main #productos {
+  .main > .mainDiv #productos {
     display: grid;
+    grid-area: prod;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    grid-area: "prod"; }
-    .main #productos .productosCard {
+    justify-items: flex-start;
+    grid-row-gap: 1rem; }
+    .main > .mainDiv #productos .productosCard {
       box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
       -webkit-box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
       -moz-box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
       border-radius: 20px;
       background-color: white;
-      width: 68%;
-      height: 80%;
-      margin: 1rem;
-      padding: 1.5rem;
+      width: 16rem;
+      height: 20rem;
+      margin: 1rem 0 1rem 0;
+      padding: 1.3rem;
       display: flex;
       flex-direction: column;
       text-align: center; }
-      .main #productos .productosCard .productoImgDiv {
+      .main > .mainDiv #productos .productosCard .productoImgDiv {
         height: 18rem;
         display: flex;
         justify-content: center;
         background-color: white; }
-        .main #productos .productosCard .productoImgDiv img {
+        .main > .mainDiv #productos .productosCard .productoImgDiv img {
           align-self: center;
-          width: 60%; }
-      .main #productos .productosCard div {
+          width: 7rem; }
+      .main > .mainDiv #productos .productosCard div {
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        height: 15%; }
-        .main #productos .productosCard div input {
+        align-items: center;
+        justify-content: space-between; }
+        .main > .mainDiv #productos .productosCard div .productoPrecio {
+          margin: 0; }
+        .main > .mainDiv #productos .productosCard div input {
           background-color: #061cb0;
           border-color: #061cb0;
           color: white;
           padding: 0.5rem;
           border-radius: 10px; }
-        .main #productos .productosCard div p {
+        .main > .mainDiv #productos .productosCard div p {
           font-weight: bold; }
 
-@media screen and (max-width: 480px) {
-  main {
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body h1 {
+    font-size: 0.8rem;
+    padding: 0.5rem; }
+  body h2 {
+    font-size: 0.7rem; }
+  body p, body input, body a, body label, body button, body li {
+    font-size: 0.6rem; }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logoHeader carritoIcon" "buscarHeader buscarHeader"; }
+    header .logoHeader {
+      grid-area: logoHeader; }
+      header .logoHeader img {
+        padding-left: 1rem;
+        width: 8rem; }
+    header .buscar {
+      grid-area: buscarHeader; }
+      header .buscar .buscarDiv > input {
+        width: 80vw;
+        height: 2rem; }
+      header .buscar .buscarLista {
+        top: 5.5rem;
+        width: 80vw; }
+    header .carritoIcon {
+      grid-area: carritoIcon;
+      padding-right: 1rem;
+      justify-self: flex-end; }
+      header .carritoIcon .contador {
+        height: 1.3rem;
+        width: 1.3rem; }
+      header .carritoIcon i {
+        font-size: 1.2rem; }
+  .carritoPushbar .carritoDiv > .carritoItems img {
+    width: 3rem; }
+  nav .nav_items {
+    padding-bottom: 0.5rem; }
+    nav .nav_items a {
+      margin: 0;
+      padding: 0.5rem; }
+      nav .nav_items a::after {
+        display: none; }
+  .main > .mainDiv {
     display: flex;
-    flex-direction: column; }
-    main #productos {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; }
+    .main > .mainDiv .categorias {
+      margin: 0;
+      padding: 1.5rem;
+      width: 17rem;
+      height: auto;
       display: flex;
-      flex-direction: column; } }
-
-@media screen and (max-width: 480px) {
+      flex-direction: column; }
+      .main > .mainDiv .categorias .categoriasLabel {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+        .main > .mainDiv .categorias .categoriasLabel br {
+          display: none; }
+    .main > .mainDiv #productos {
+      grid-template-columns: 1fr;
+      grid-row-gap: 0rem;
+      justify-items: center; }
+      .main > .mainDiv #productos .productosCard {
+        width: 17rem; }
   footer {
     display: flex;
-    flex-direction: column; }
-    footer .marcas div {
-      display: flex;
-      flex-direction: column; } }
+    flex-direction: column;
+    padding: 1rem; }
+    footer div {
+      padding: 0rem;
+      margin: 0; }
+    footer .menu > div > a {
+      padding: 0.7rem;
+      text-align: center; }
+    footer .marcas > div {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 1rem; }
+    footer .redes_logo div .logo > img {
+      width: 9rem; }
+    footer .redes_logo div .redes {
+      width: 18rem; }
+  [data-pushbar-direction="left"][data-pushbar-id], [data-pushbar-direction="right"][data-pushbar-id] {
+    width: 100%; } }
 
 .headerCompra {
   position: relative; }
@@ -344,17 +411,11 @@ footer {
     width: 60rem;
     grid-template-areas: "datos pedido" "pago pago" "finalizarCompra finalizarCompra"; }
     .mainCompra .formBackground h3 {
-      text-align: center;
       padding: 10px; }
     .mainCompra .formBackground hr {
       color: black; }
     .mainCompra .formBackground label {
-      font-family: "Quicksand";
-      font-weight: bold;
-      font-size: 0.8rem; }
-    .mainCompra .formBackground select {
-      font-family: "Quicksand";
-      font-size: 0.8rem; }
+      font-weight: bold; }
     .mainCompra .formBackground input {
       width: 20rem;
       height: 2rem;
