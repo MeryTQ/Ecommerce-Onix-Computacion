@@ -283,12 +283,12 @@ footer{
         grid-area: redes;
         justify-self: flex-end;
         div{
+            display: grid;
+            grid-row-gap: 1rem;
+            justify-content: center;
             .logo{
-                display: flex;
-                justify-content: center;
                 img{
                     width: 11rem;
-                    padding-bottom: 0.6em;
                 }
             }
             .redes{
