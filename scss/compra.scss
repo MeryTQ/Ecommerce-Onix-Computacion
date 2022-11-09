@@ -1,9 +1,6 @@
 
 .headerCompra{
     position: relative;
-    .buscarCompra{
-        display: none;
-    }
 }
 
 .mainCompra{
@@ -40,8 +37,8 @@
             font-size: 0.8rem;
         }
         div{
-            padding: 0.7rem;
-            padding-left: 01rem;
+            padding: 0.7rem 0 0 1rem;
+
         }
         .facturacionDatos{
             grid-area: datos;
@@ -53,7 +50,7 @@
             div{
                 display: grid;
                 grid-template-areas: 
-                "seleccione seleccione"
+                "seleccione none"
                 "titular vencimiento"
                 "tarjeta clave"
                 ;
@@ -89,9 +86,6 @@
                     grid-template-columns: 1fr 1fr 1fr 1fr;
                     align-items: center;
                     justify-items: center;
-                    p{
-                        font-size: 0.8rem;
-                    }
                 }
             }
             .totalPedido{

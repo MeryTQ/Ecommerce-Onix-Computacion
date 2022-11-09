@@ -308,6 +308,87 @@ footer {
         .main > .mainDiv #productos .productosCard div p {
           font-weight: bold; }
 
+.headerCompra {
+  position: relative; }
+
+.mainCompra {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2rem; }
+  .mainCompra .formBackground {
+    background-color: white;
+    display: grid;
+    width: 60rem;
+    grid-template-areas: "datos pedido" "pago pago" "finalizarCompra finalizarCompra"; }
+    .mainCompra .formBackground h3 {
+      padding: 10px; }
+    .mainCompra .formBackground hr {
+      color: black; }
+    .mainCompra .formBackground label {
+      font-weight: bold; }
+    .mainCompra .formBackground input {
+      width: 20rem;
+      height: 2rem;
+      border: solid 1px #c0c0c0; }
+    .mainCompra .formBackground textarea {
+      border: solid 1px #c0c0c0;
+      font-family: "Quicksand";
+      font-size: 0.8rem; }
+    .mainCompra .formBackground div {
+      padding: 0.7rem 0 0 1rem; }
+    .mainCompra .formBackground .facturacionDatos {
+      grid-area: datos;
+      width: 30rem;
+      border-right: 1px solid gainsboro; }
+    .mainCompra .formBackground .facturacionPago {
+      grid-area: pago; }
+      .mainCompra .formBackground .facturacionPago div {
+        display: grid;
+        grid-template-areas: "seleccione none" "titular vencimiento" "tarjeta clave"; }
+        .mainCompra .formBackground .facturacionPago div .metodo {
+          grid-area: seleccione; }
+          .mainCompra .formBackground .facturacionPago div .metodo select {
+            width: 5rem; }
+        .mainCompra .formBackground .facturacionPago div .titular {
+          grid-area: titular; }
+        .mainCompra .formBackground .facturacionPago div .vencimiento {
+          grid-area: vencimiento; }
+        .mainCompra .formBackground .facturacionPago div .tarjeta {
+          grid-area: tarjeta; }
+        .mainCompra .formBackground .facturacionPago div .clave {
+          grid-area: clave; }
+    .mainCompra .formBackground .facturacionPedido {
+      width: 30rem;
+      grid-area: pedido; }
+      .mainCompra .formBackground .facturacionPedido .tuPedido {
+        display: flex;
+        flex-direction: column;
+        padding: 0; }
+        .mainCompra .formBackground .facturacionPedido .tuPedido .divPedido {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          align-items: center;
+          justify-items: center; }
+      .mainCompra .formBackground .facturacionPedido .totalPedido {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 4rem; }
+    .mainCompra .formBackground .formEnviar {
+      grid-area: finalizarCompra;
+      padding: 3rem;
+      display: flex;
+      justify-content: center; }
+      .mainCompra .formBackground .formEnviar input {
+        width: 10rem;
+        height: 3rem;
+        font-weight: bold;
+        background-color: orange;
+        border: 1px solid black;
+        transition: 0.5s; }
+        .mainCompra .formBackground .formEnviar input:hover {
+          color: white; }
+
 @media screen and (min-width: 1025px) and (max-width: 1328px) {
   .main > .mainDiv {
     display: flex;
@@ -344,13 +425,11 @@ footer {
 @media screen and (min-width: 961px) and (max-width: 1024px) {
   body h1 {
     font-size: 1.3rem; }
-  nav .nav_items {
-    padding-bottom: 0.5rem; }
-    nav .nav_items a {
-      margin: 0;
-      padding: 0.5rem; }
-      nav .nav_items a::after {
-        display: none; }
+  nav .nav_items a {
+    margin: 0;
+    padding: 0.5rem; }
+    nav .nav_items a::after {
+      display: none; }
   .main > .mainDiv {
     display: flex;
     flex-direction: column;
@@ -491,6 +570,8 @@ footer {
         font-size: 1.2rem; }
   .carritoPushbar .carritoDiv > .carritoItems img {
     width: 3rem; }
+  .carritoPushbar .carritoDiv > .carritoItems button > i {
+    padding: 6px 4px 5px 4px; }
   .carritoPushbar .total > p {
     font-size: 0.8rem; }
   nav .nav_items {
@@ -587,6 +668,8 @@ footer {
         font-size: 1.2rem; }
   .carritoPushbar .carritoDiv > .carritoItems img {
     width: 3rem; }
+  .carritoPushbar .carritoDiv > .carritoItems button > i {
+    padding: 6px 4px 5px 4px; }
   .carritoPushbar .total > p {
     font-size: 0.8rem; }
   nav .nav_items {
@@ -631,8 +714,8 @@ footer {
       padding: 0.7rem;
       text-align: center; }
     footer .marcas > div {
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 4rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 0rem;
       padding: 2rem 0 2rem 0; }
     footer .redes_logo div .logo > img {
       width: 9rem; }
@@ -644,88 +727,48 @@ footer {
   [data-pushbar-direction="left"][data-pushbar-id], [data-pushbar-direction="right"][data-pushbar-id] {
     width: 100%; } }
 
-.headerCompra {
-  position: relative; }
-  .headerCompra .buscarCompra {
-    display: none; }
-
-.mainCompra {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  padding: 2rem; }
-  .mainCompra .formBackground {
-    background-color: white;
-    display: grid;
-    width: 60rem;
-    grid-template-areas: "datos pedido" "pago pago" "finalizarCompra finalizarCompra"; }
-    .mainCompra .formBackground h3 {
-      padding: 10px; }
-    .mainCompra .formBackground hr {
-      color: black; }
-    .mainCompra .formBackground label {
-      font-weight: bold; }
-    .mainCompra .formBackground input {
-      width: 20rem;
-      height: 2rem;
-      border: solid 1px #c0c0c0; }
-    .mainCompra .formBackground textarea {
-      border: solid 1px #c0c0c0;
-      font-family: "Quicksand";
-      font-size: 0.8rem; }
-    .mainCompra .formBackground div {
-      padding: 0.7rem;
-      padding-left: 01rem; }
-    .mainCompra .formBackground .facturacionDatos {
-      grid-area: datos;
-      width: 30rem;
-      border-right: 1px solid gainsboro; }
-    .mainCompra .formBackground .facturacionPago {
-      grid-area: pago; }
-      .mainCompra .formBackground .facturacionPago div {
-        display: grid;
-        grid-template-areas: "seleccione seleccione" "titular vencimiento" "tarjeta clave"; }
-        .mainCompra .formBackground .facturacionPago div .metodo {
-          grid-area: seleccione; }
-          .mainCompra .formBackground .facturacionPago div .metodo select {
-            width: 5rem; }
-        .mainCompra .formBackground .facturacionPago div .titular {
-          grid-area: titular; }
-        .mainCompra .formBackground .facturacionPago div .vencimiento {
-          grid-area: vencimiento; }
-        .mainCompra .formBackground .facturacionPago div .tarjeta {
-          grid-area: tarjeta; }
-        .mainCompra .formBackground .facturacionPago div .clave {
-          grid-area: clave; }
-    .mainCompra .formBackground .facturacionPedido {
-      width: 30rem;
-      grid-area: pedido; }
-      .mainCompra .formBackground .facturacionPedido .tuPedido {
-        display: flex;
-        flex-direction: column;
-        padding: 0; }
-        .mainCompra .formBackground .facturacionPedido .tuPedido .divPedido {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          align-items: center;
-          justify-items: center; }
-          .mainCompra .formBackground .facturacionPedido .tuPedido .divPedido p {
-            font-size: 0.8rem; }
-      .mainCompra .formBackground .facturacionPedido .totalPedido {
-        display: flex;
-        justify-content: flex-end;
-        padding-right: 4rem; }
-    .mainCompra .formBackground .formEnviar {
-      grid-area: finalizarCompra;
-      padding: 3rem;
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .headerCompra {
+    grid-template-rows: 1fr; }
+  .mainCompra {
+    padding: 0; }
+    .mainCompra .formBackground {
       display: flex;
-      justify-content: center; }
-      .mainCompra .formBackground .formEnviar input {
-        width: 10rem;
-        height: 3rem;
-        font-weight: bold;
-        background-color: orange;
-        border: 1px solid black;
-        transition: 0.5s; }
-        .mainCompra .formBackground .formEnviar input:hover {
-          color: white; }
+      flex-direction: column;
+      width: 19rem;
+      margin: 2rem 0 2rem 0; }
+      .mainCompra .formBackground h3 {
+        font-size: 0.9rem;
+        padding: 0; }
+      .mainCompra .formBackground input {
+        width: 100%; }
+      .mainCompra .formBackground textarea {
+        width: 100%; }
+      .mainCompra .formBackground select {
+        width: 100%;
+        font-size: 0.7rem; }
+        .mainCompra .formBackground select option {
+          font-size: 0.7rem; }
+      .mainCompra .formBackground p {
+        font-size: 0.6rem; }
+      .mainCompra .formBackground b {
+        font-size: 0.8rem; }
+      .mainCompra .formBackground div {
+        padding: 0.5rem; }
+      .mainCompra .formBackground .facturacionDatos {
+        width: auto;
+        border-right: none; }
+      .mainCompra .formBackground .facturacionPago {
+        width: auto; }
+        .mainCompra .formBackground .facturacionPago div {
+          display: block; }
+          .mainCompra .formBackground .facturacionPago div .metodo > select {
+            width: 100%; }
+      .mainCompra .formBackground .facturacionPedido {
+        width: auto; }
+        .mainCompra .formBackground .facturacionPedido .totalPedido {
+          justify-content: center;
+          padding: 1rem 0 0 0; }
+      .mainCompra .formBackground .formEnviar > input {
+        width: 7rem;
+        height: 2.5rem; } }
