@@ -1,21 +1,24 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box; }
 
-body h1 {
-  font-family: "Quicksand";
-  font-size: 1.5rem;
-  text-align: center;
-  margin: 0;
-  padding: 0.8rem;
-  color: white;
-  background-color: #222325;
-  border-bottom: 1px solid black; }
+body .h1 {
+  margin: 0; }
+  body .h1 h1 {
+    font-family: "Quicksand";
+    font-size: 70%;
+    text-align: center;
+    margin: 0;
+    padding: 0.5rem;
+    color: white;
+    background-color: #222325;
+    border-bottom: 1px solid black; }
 
 body h2 {
   font-family: "Quicksand";
-  font-size: 1.2rem;
+  font-size: 100%;
   font-weight: bold; }
 
 body h3 {
@@ -32,7 +35,9 @@ body a {
   font-family: "Russo One";
   color: white;
   font-size: 0.9rem;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 0;
+  padding: 0.5rem; }
 
 body main {
   background-image: url("../assets/Layout/Background.png"); }
@@ -47,41 +52,37 @@ header {
   justify-content: space-between;
   background-color: #ffffff;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 3% 0.5rem 3%;
   border-bottom: 1px solid #222325;
   position: sticky;
   top: 0;
   z-index: 1; }
   header img {
-    width: 13rem;
-    padding-left: 3rem; }
-  header .buscar {
-    padding: 5px; }
-    header .buscar .buscarDiv > input {
-      width: 20vw;
-      height: 2.3rem;
-      padding: 0 10px;
-      border: 1px solid silver;
-      border-radius: 5px; }
-    header .buscar .buscarLista {
-      background-color: #ffffff;
-      top: 3.1rem;
-      width: 20vw;
-      align-self: flex-start;
-      position: fixed;
-      display: none; }
-      header .buscar .buscarLista ul {
-        padding: 0;
-        margin: 0; }
-        header .buscar .buscarLista ul li {
-          list-style-type: none;
-          padding: 10px; }
-          header .buscar .buscarLista ul li:hover {
-            background-color: #222325;
-            color: white; }
+    width: 10rem; }
+  header .buscar .buscarDiv > input {
+    width: 20vw;
+    height: 2.3rem;
+    padding: 0 10px;
+    border: 1px solid silver;
+    border-radius: 5px; }
+  header .buscar .buscarLista {
+    background-color: #ffffff;
+    top: 3.2rem;
+    width: 20vw;
+    align-self: flex-start;
+    position: fixed;
+    display: none; }
+    header .buscar .buscarLista ul {
+      padding: 0;
+      margin: 0; }
+      header .buscar .buscarLista ul li {
+        list-style-type: none;
+        padding: 10px; }
+        header .buscar .buscarLista ul li:hover {
+          background-color: #222325;
+          color: white; }
   header .carritoIcon {
-    display: flex;
-    padding-right: 3rem; }
+    display: flex; }
     header .carritoIcon .contador {
       background-color: orange;
       height: 1.5rem;
@@ -114,8 +115,8 @@ header {
       width: 100%;
       text-align: center;
       margin: 0;
-      align-self: center;
-      padding-top: 0.5rem; }
+      padding-top: 0.5rem;
+      align-self: center; }
   .carritoPushbar .sad {
     color: white;
     display: flex;
@@ -143,25 +144,30 @@ header {
         border-radius: 5px; }
   .carritoPushbar .total {
     color: white;
-    margin: 2rem;
-    display: flex; }
+    margin: 5%;
+    display: flex;
+    align-items: center; }
     .carritoPushbar .total p {
-      width: 50%; }
-    .carritoPushbar .total div {
+      width: 50%;
+      margin: 0;
+      font-weight: bold; }
+    .carritoPushbar .total .pagar {
       width: 50%;
       display: flex;
       justify-content: flex-end; }
-      .carritoPushbar .total div input {
-        background-color: #10c237;
-        color: #000000;
-        border: none;
-        padding: 0rem 0.6rem 0rem 0.6rem;
-        border-radius: 0.7rem;
-        font-weight: bold;
-        height: 2.2rem;
-        transition: 0.5s; }
-        .carritoPushbar .total div input:hover {
-          color: white; }
+      .carritoPushbar .total .pagar a {
+        padding: 0; }
+        .carritoPushbar .total .pagar a input {
+          background-color: #10c237;
+          color: #000000;
+          border: none;
+          padding: 0rem 0.6rem 0rem 0.6rem;
+          border-radius: 0.7rem;
+          font-weight: bold;
+          height: 2.2rem;
+          transition: 0.5s; }
+          .carritoPushbar .total .pagar a input:hover {
+            color: white; }
 
 /* --------------- NAV --------------- */
 nav {
@@ -199,32 +205,33 @@ nav {
 footer {
   background-color: #222325;
   height: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
   display: grid;
-  grid-template-areas: "menu marcas marcas redes";
+  grid-template-areas: "menu marcas marcas redes" "info info info info";
   align-items: center; }
   footer .menu {
     grid-area: menu; }
     footer .menu div {
-      padding: 0;
-      margin: 0;
       display: flex;
       flex-direction: column; }
       footer .menu div a {
         color: white;
-        transition: 0.4s; }
+        transition: 0.4s;
+        padding-bottom: 0.5rem; }
         footer .menu div a:hover {
           color: orange; }
   footer .marcas {
     grid-area: marcas;
-    justify-self: center; }
+    justify-self: center;
+    width: 100%; }
     footer .marcas div {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      align-items: center; }
+      width: 100%;
+      align-items: center;
+      justify-items: center; }
       footer .marcas div img {
-        width: 9em;
-        padding: 2em; }
+        width: 5rem; }
   footer .redes_logo {
     grid-area: redes;
     justify-self: flex-end; }
@@ -233,7 +240,7 @@ footer {
       grid-row-gap: 1rem;
       justify-content: center; }
       footer .redes_logo div .logo img {
-        width: 11rem; }
+        width: 10rem; }
       footer .redes_logo div .redes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -244,19 +251,29 @@ footer {
             transform: scale(1.1);
             color: white;
             box-shadow: 1px 1px 16px 2px white; }
+  footer .miInfo {
+    grid-area: info; }
+    footer .miInfo p {
+      color: silver;
+      text-align: center;
+      font-size: 0.6rem; }
 
 .main > .mainDiv {
   display: grid;
   grid-template-areas: "cat prod prod prod prod";
-  padding: 4rem 1rem 4rem 1rem; }
+  padding: 2% 1% 2% 1%; }
   .main > .mainDiv .categorias {
-    height: 25.5rem;
-    width: 15rem;
+    height: 24rem;
+    width: 90%;
     border-radius: 10px;
-    padding: 2rem;
-    margin: 1rem;
+    padding: 1.4rem;
+    margin-top: 1rem;
     background-color: white;
-    grid-area: cat; }
+    grid-area: cat;
+    justify-self: center; }
+    .main > .mainDiv .categorias .categoriasLabel {
+      display: grid;
+      grid-row-gap: 0.3rem; }
     .main > .mainDiv .categorias button {
       border: none;
       padding: 0.5rem;
@@ -269,7 +286,7 @@ footer {
     display: grid;
     grid-area: prod;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: flex-start;
+    justify-items: center;
     grid-row-gap: 1rem; }
     .main > .mainDiv #productos .productosCard {
       box-shadow: 1px 1px 16px 2px rgba(34, 35, 37, 0.22);
@@ -290,7 +307,6 @@ footer {
         justify-content: center;
         background-color: white; }
         .main > .mainDiv #productos .productosCard .productoImgDiv img {
-          align-self: center;
           width: 7rem; }
       .main > .mainDiv #productos .productosCard div {
         display: flex;
@@ -298,15 +314,14 @@ footer {
         align-items: center;
         justify-content: space-between; }
         .main > .mainDiv #productos .productosCard div .productoPrecio {
-          margin: 0; }
-        .main > .mainDiv #productos .productosCard div input {
+          margin: 0;
+          font-weight: bold; }
+        .main > .mainDiv #productos .productosCard div .botonAñadir {
           background-color: #061cb0;
-          border-color: #061cb0;
+          border: none;
           color: white;
           padding: 0.5rem;
           border-radius: 10px; }
-        .main > .mainDiv #productos .productosCard div p {
-          font-weight: bold; }
 
 .headerCompra {
   position: relative; }
@@ -320,6 +335,7 @@ footer {
     background-color: white;
     display: grid;
     width: 60rem;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "datos pedido" "pago pago" "finalizarCompra finalizarCompra"; }
     .mainCompra .formBackground h3 {
       padding: 10px; }
@@ -328,38 +344,38 @@ footer {
     .mainCompra .formBackground label {
       font-weight: bold; }
     .mainCompra .formBackground input {
-      width: 20rem;
+      width: 20vw;
       height: 2rem;
       border: solid 1px #c0c0c0; }
     .mainCompra .formBackground textarea {
       border: solid 1px #c0c0c0;
       font-family: "Quicksand";
-      font-size: 0.8rem; }
+      font-size: 0.8rem;
+      width: 20vw; }
     .mainCompra .formBackground div {
-      padding: 0.7rem 0 0 1rem; }
+      padding: 1rem; }
     .mainCompra .formBackground .facturacionDatos {
       grid-area: datos;
-      width: 30rem;
       border-right: 1px solid gainsboro; }
     .mainCompra .formBackground .facturacionPago {
       grid-area: pago; }
-      .mainCompra .formBackground .facturacionPago div {
+      .mainCompra .formBackground .facturacionPago .divPago {
+        padding: 0;
         display: grid;
         grid-template-areas: "seleccione none" "titular vencimiento" "tarjeta clave"; }
-        .mainCompra .formBackground .facturacionPago div .metodo {
+        .mainCompra .formBackground .facturacionPago .divPago .metodo {
           grid-area: seleccione; }
-          .mainCompra .formBackground .facturacionPago div .metodo select {
+          .mainCompra .formBackground .facturacionPago .divPago .metodo select {
             width: 5rem; }
-        .mainCompra .formBackground .facturacionPago div .titular {
+        .mainCompra .formBackground .facturacionPago .divPago .titular {
           grid-area: titular; }
-        .mainCompra .formBackground .facturacionPago div .vencimiento {
+        .mainCompra .formBackground .facturacionPago .divPago .vencimiento {
           grid-area: vencimiento; }
-        .mainCompra .formBackground .facturacionPago div .tarjeta {
+        .mainCompra .formBackground .facturacionPago .divPago .tarjeta {
           grid-area: tarjeta; }
-        .mainCompra .formBackground .facturacionPago div .clave {
+        .mainCompra .formBackground .facturacionPago .divPago .clave {
           grid-area: clave; }
     .mainCompra .formBackground .facturacionPedido {
-      width: 30rem;
       grid-area: pedido; }
       .mainCompra .formBackground .facturacionPedido .tuPedido {
         display: flex;
@@ -367,7 +383,7 @@ footer {
         padding: 0; }
         .mainCompra .formBackground .facturacionPedido .tuPedido .divPedido {
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
           align-items: center;
           justify-items: center; }
       .mainCompra .formBackground .facturacionPedido .totalPedido {
@@ -391,102 +407,42 @@ footer {
 
 @media screen and (min-width: 1025px) and (max-width: 1328px) {
   .main > .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem; }
+    grid-template-areas: "cat" "prod"; }
     .main > .mainDiv .categorias {
-      margin: 0;
-      padding: 1.5rem;
-      width: 90%;
       height: auto;
       display: flex;
       flex-direction: column; }
       .main > .mainDiv .categorias .categoriasLabel {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr; }
-        .main > .mainDiv .categorias .categoriasLabel br {
-          display: none; }
     .main > .mainDiv #productos {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-row-gap: 0rem;
-      grid-column-gap: 2rem;
-      justify-items: center; }
-      .main > .mainDiv #productos .productosCard {
-        width: 17rem; }
-  footer {
-    padding: 1rem; }
-    footer .menu > div > a {
-      padding: 0.3rem; }
-    footer .marcas > div {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 3rem; } }
+      grid-template-columns: 1fr 1fr 1fr; }
+  footer .marcas > div {
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 @media screen and (min-width: 961px) and (max-width: 1024px) {
-  body h1 {
-    font-size: 1.3rem; }
   nav .nav_items a {
     margin: 0;
     padding: 0.5rem; }
     nav .nav_items a::after {
       display: none; }
   .main > .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem; }
+    grid-template-areas: "cat" "prod"; }
     .main > .mainDiv .categorias {
-      margin: 0;
-      padding: 1.5rem;
-      width: 95%;
       height: auto;
       display: flex;
       flex-direction: column; }
       .main > .mainDiv .categorias .categoriasLabel {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-row-gap: 0.1rem; }
-        .main > .mainDiv .categorias .categoriasLabel br {
-          display: none; }
+        grid-template-columns: 1fr 1fr 1fr 1fr; }
     .main > .mainDiv #productos {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-row-gap: 0rem;
-      grid-column-gap: 2rem;
-      justify-items: center; }
-      .main > .mainDiv #productos .productosCard {
-        width: 17rem; }
-  footer {
-    padding: 1rem; }
-    footer .menu > div > a {
-      padding: 0.3rem; }
-    footer .marcas > div {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 3rem; } }
+      grid-template-columns: 1fr 1fr 1fr; }
+  footer .marcas > div {
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 @media screen and (min-width: 769px) and (max-width: 960px) {
-  body h1 {
-    font-size: 1rem; }
-  body h2 {
-    font-size: 0.9rem; }
-  body p, body input, body a, body label, body button, body li {
-    font-size: 0.8rem; }
-  header .logoHeader img {
-    width: 9rem;
-    padding-left: 1rem; }
-  header .buscar .buscarDiv input {
-    width: 30vw;
-    height: 2rem; }
+  header .buscar .buscarDiv > input {
+    width: 30vw; }
   header .buscar .buscarLista {
     width: 30vw; }
-  header .carritoIcon {
-    padding-right: 1rem; }
-    header .carritoIcon .contador {
-      height: 1.4rem;
-      width: 1.4rem; }
-    header .carritoIcon i {
-      font-size: 1.4rem; }
-  .carritoPushbar .total > p {
-    font-size: 0.9rem; }
   nav .nav_items {
     padding-bottom: 0.5rem; }
     nav .nav_items a {
@@ -495,85 +451,42 @@ footer {
       nav .nav_items a::after {
         display: none; }
   .main > .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem; }
+    grid-template-areas: "cat" "prod"; }
     .main > .mainDiv .categorias {
-      margin: 0;
-      padding: 1.5rem;
-      width: 90%;
       height: auto;
       display: flex;
       flex-direction: column; }
       .main > .mainDiv .categorias .categoriasLabel {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-row-gap: 0.1rem; }
-        .main > .mainDiv .categorias .categoriasLabel br {
-          display: none; }
+        grid-template-columns: 1fr 1fr 1fr 1fr; }
     .main > .mainDiv #productos {
-      grid-template-columns: 1fr 1fr;
-      grid-row-gap: 0rem;
-      grid-column-gap: 5rem;
-      justify-items: center; }
-      .main > .mainDiv #productos .productosCard {
-        width: 17rem; }
-  footer {
-    padding: 1rem; }
-    footer .menu > div > a {
-      padding: 0.2rem; }
-    footer .marcas > div {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 3rem; }
-    footer .redes_logo div .logo > img {
-      width: 9rem; }
-    footer .redes_logo div .redes a > i {
-      font-size: 1rem; } }
+      grid-template-columns: 1fr 1fr; }
+  footer .marcas > div {
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  body h1 {
-    font-size: 1rem;
-    padding: 0.5rem; }
-  body h2 {
-    font-size: 0.9rem; }
-  body p, body input, body a, body label, body button, body li {
-    font-size: 0.7rem; }
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-row-gap: 0.4rem;
     grid-template-areas: "logoHeader carritoIcon" "buscarHeader buscarHeader"; }
     header .logoHeader {
       grid-area: logoHeader; }
-      header .logoHeader img {
-        padding-left: 1rem;
-        width: 8rem; }
     header .buscar {
       grid-area: buscarHeader;
       display: grid;
       justify-self: center; }
       header .buscar .buscarDiv input {
-        width: 70vw;
-        height: 2rem; }
+        width: 70vw; }
       header .buscar .buscarLista {
-        top: 5.5rem;
+        top: 6.5rem;
         width: 70vw; }
     header .carritoIcon {
       grid-area: carritoIcon;
-      padding-right: 1rem;
       justify-self: flex-end; }
       header .carritoIcon .contador {
-        height: 1.3rem;
-        width: 1.3rem; }
-      header .carritoIcon i {
-        font-size: 1.2rem; }
-  .carritoPushbar .carritoDiv > .carritoItems img {
-    width: 3rem; }
-  .carritoPushbar .carritoDiv > .carritoItems button > i {
-    padding: 6px 4px 5px 4px; }
-  .carritoPushbar .total > p {
-    font-size: 0.8rem; }
+        height: 1.4rem;
+        width: 1.4rem; }
   nav .nav_items {
     padding-bottom: 0.5rem; }
     nav .nav_items a {
@@ -582,61 +495,28 @@ footer {
       nav .nav_items a::after {
         display: none; }
   .main > .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem; }
+    grid-template-areas: "cat" "prod"; }
     .main > .mainDiv .categorias {
-      margin: 0;
-      padding: 1.5rem;
-      width: 100%;
       height: auto;
       display: flex;
       flex-direction: column; }
       .main > .mainDiv .categorias .categoriasLabel {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 0.1rem; }
-        .main > .mainDiv .categorias .categoriasLabel br {
-          display: none; }
+        grid-template-columns: 1fr 1fr 1fr; }
     .main > .mainDiv #productos {
-      grid-template-columns: 1fr;
-      grid-row-gap: 0rem;
-      justify-items: center; }
-      .main > .mainDiv #productos .productosCard {
-        width: 17rem; }
+      grid-template-columns: 1fr; }
   footer {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 2rem 0; }
-    footer div {
-      padding: 0rem;
-      margin: 0; }
+    grid-template-areas: "menu" "marcas" "redes" "info";
+    grid-row-gap: 2.5rem; }
     footer .menu > div > a {
-      padding: 0.7rem;
       text-align: center; }
     footer .marcas > div {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 4rem;
-      padding: 2rem 0 2rem 0; }
-    footer .redes_logo div .logo > img {
-      width: 9rem; }
-    footer .redes_logo div .redes {
-      width: 18rem; }
-      footer .redes_logo div .redes a > i {
-        font-size: 1.2rem;
-        padding-top: 1rem; }
+      grid-template-columns: 1fr 1fr 1fr; }
+    footer .redes_logo {
+      justify-self: center; }
   [data-pushbar-direction="left"][data-pushbar-id], [data-pushbar-direction="right"][data-pushbar-id] {
     width: 100%; } }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  body h1 {
-    font-size: 1rem;
-    padding: 0.5rem; }
-  body h2 {
-    font-size: 0.9rem; }
-  body p, body input, body a, body label, body button, body li {
-    font-size: 0.7rem; }
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -644,9 +524,6 @@ footer {
     grid-template-areas: "logoHeader carritoIcon" "buscarHeader buscarHeader"; }
     header .logoHeader {
       grid-area: logoHeader; }
-      header .logoHeader img {
-        padding-left: 1rem;
-        width: 8rem; }
     header .buscar {
       grid-area: buscarHeader;
       display: grid;
@@ -655,23 +532,14 @@ footer {
         width: 70vw;
         height: 2rem; }
       header .buscar .buscarLista {
-        top: 5.5rem;
+        top: 6rem;
         width: 70vw; }
     header .carritoIcon {
       grid-area: carritoIcon;
-      padding-right: 1rem;
       justify-self: flex-end; }
       header .carritoIcon .contador {
-        height: 1.3rem;
-        width: 1.3rem; }
-      header .carritoIcon i {
-        font-size: 1.2rem; }
-  .carritoPushbar .carritoDiv > .carritoItems img {
-    width: 3rem; }
-  .carritoPushbar .carritoDiv > .carritoItems button > i {
-    padding: 6px 4px 5px 4px; }
-  .carritoPushbar .total > p {
-    font-size: 0.8rem; }
+        height: 1.4rem;
+        width: 1.4rem; }
   nav .nav_items {
     padding-bottom: 0.5rem; }
     nav .nav_items a {
@@ -680,95 +548,48 @@ footer {
       nav .nav_items a::after {
         display: none; }
   .main > .mainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem; }
+    grid-template-areas: "cat" "prod"; }
     .main > .mainDiv .categorias {
-      margin: 0;
-      padding: 1.5rem;
-      width: 95%;
       height: auto;
       display: flex;
       flex-direction: column; }
       .main > .mainDiv .categorias .categoriasLabel {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 0.1rem; }
-        .main > .mainDiv .categorias .categoriasLabel br {
-          display: none; }
     .main > .mainDiv #productos {
-      grid-template-columns: 1fr;
-      grid-row-gap: 0rem;
-      justify-items: center; }
-      .main > .mainDiv #productos .productosCard {
-        width: 17rem; }
+      grid-template-columns: 1fr; }
   footer {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 2rem 0; }
-    footer div {
-      padding: 0rem;
-      margin: 0; }
+    grid-template-areas: "menu" "marcas" "redes" "info";
+    grid-row-gap: 2.5rem; }
     footer .menu > div > a {
-      padding: 0.7rem;
       text-align: center; }
     footer .marcas > div {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 0rem;
-      padding: 2rem 0 2rem 0; }
-    footer .redes_logo div .logo > img {
-      width: 9rem; }
-    footer .redes_logo div .redes {
-      width: 18rem; }
-      footer .redes_logo div .redes a > i {
-        font-size: 1.2rem;
-        padding-top: 1rem; }
+      grid-template-columns: 1fr 1fr 1fr; }
+    footer .redes_logo {
+      justify-self: center; }
   [data-pushbar-direction="left"][data-pushbar-id], [data-pushbar-direction="right"][data-pushbar-id] {
     width: 100%; } }
 
+@media screen and (min-width: 961px) and (max-width: 1024px) {
+  .mainCompra .formBackground {
+    width: 50rem; } }
+
+@media screen and (min-width: 769px) and (max-width: 960px) {
+  .mainCompra .formBackground {
+    width: 40rem; } }
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .mainCompra .formBackground {
+    width: 25rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "datos" "pedido" "pago" "finalizarCompra"; }
+    .mainCompra .formBackground input, .mainCompra .formBackground textarea {
+      width: 100%; } }
+
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  .headerCompra {
-    grid-template-rows: 1fr; }
-  .mainCompra {
-    padding: 0; }
-    .mainCompra .formBackground {
-      display: flex;
-      flex-direction: column;
-      width: 19rem;
-      margin: 2rem 0 2rem 0; }
-      .mainCompra .formBackground h3 {
-        font-size: 0.9rem;
-        padding: 0; }
-      .mainCompra .formBackground input {
-        width: 100%; }
-      .mainCompra .formBackground textarea {
-        width: 100%; }
-      .mainCompra .formBackground select {
-        width: 100%;
-        font-size: 0.7rem; }
-        .mainCompra .formBackground select option {
-          font-size: 0.7rem; }
-      .mainCompra .formBackground p {
-        font-size: 0.6rem; }
-      .mainCompra .formBackground b {
-        font-size: 0.8rem; }
-      .mainCompra .formBackground div {
-        padding: 0.5rem; }
-      .mainCompra .formBackground .facturacionDatos {
-        width: auto;
-        border-right: none; }
-      .mainCompra .formBackground .facturacionPago {
-        width: auto; }
-        .mainCompra .formBackground .facturacionPago div {
-          display: block; }
-          .mainCompra .formBackground .facturacionPago div .metodo > select {
-            width: 100%; }
-      .mainCompra .formBackground .facturacionPedido {
-        width: auto; }
-        .mainCompra .formBackground .facturacionPedido .totalPedido {
-          justify-content: center;
-          padding: 1rem 0 0 0; }
-      .mainCompra .formBackground .formEnviar > input {
-        width: 7rem;
-        height: 2.5rem; } }
+  .mainCompra .formBackground {
+    width: 19rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "datos" "pedido" "pago" "finalizarCompra"; }
+    .mainCompra .formBackground input, .mainCompra .formBackground textarea {
+      width: 100%; } }

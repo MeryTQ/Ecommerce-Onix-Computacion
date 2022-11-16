@@ -2,13 +2,18 @@
     display: grid;
     grid-template-areas: 
     "cat prod prod prod prod";
-    padding: 4rem 1rem 4rem 1rem;
+    padding: 2% 1% 2% 1%;
     .categorias{
-        height: 25.5rem; width: 15rem;
+        height: 24rem; width: 90%;
         border-radius: 10px;
-        padding: 2rem; margin: 1rem;
+        padding: 1.4rem; margin-top: 1rem;
         background-color: white;
         grid-area: cat;
+        justify-self: center;
+        .categoriasLabel{
+            display: grid;
+            grid-row-gap: 0.3rem;
+        }
         button{
             border: none;
             padding: 0.5rem;
@@ -23,7 +28,7 @@
         display: grid;
         grid-area: prod;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: flex-start;
+        justify-items: center;
         grid-row-gap: 1rem;
         .productosCard{
             box-shadow: 1px 1px 16px 2px rgba(34,35,37,0.22);
@@ -43,7 +48,6 @@
                 justify-content: center;
                 background-color: white;
                 img{
-                    align-self: center;
                     width: 7rem;
                 }
             }
@@ -54,16 +58,14 @@
                 justify-content: space-between;
                 .productoPrecio{
                     margin: 0;
+                    font-weight: bold;
                 }
-                input{
+                .botonAñadir{
                     background-color: #061cb0;
-                    border-color: #061cb0;
+                    border: none;
                     color: white;
                     padding: 0.5rem;
                     border-radius: 10px;
-                }
-                p{
-                    font-weight: bold;
                 }
             }
         }

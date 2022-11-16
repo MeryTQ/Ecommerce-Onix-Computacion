@@ -119,7 +119,9 @@
       </div>
 
       <!---------- CATEGORIAS ---------->
-      <h1> PRODUCTOS </h1>
+      <div class="h1">
+        <h1> PRODUCTOS </h1>
+      </div>
 
     <main class="main">
       <div class="mainDiv">
@@ -127,17 +129,17 @@
           <h2>Categorías</h2> 
           <form action="">
             <div class="categoriasLabel">
-              <label for="procesador"><input class="filtro" type="radio" name="categoria" value="Procesador"> Procesador </label> <br>
-              <label for="motherboard"><input class="filtro" type="radio" name="categoria" value="Motherboard"> Motherboard </label> <br>
-              <label for="cooler"><input class="filtro" type="radio" name="categoria" value="Cooler"> Cooler </label> <br>
-              <label for="ram"><input class="filtro" type="radio" name="categoria" value="Ram"> Memoria RAM </label> <br>
-              <label for="video"><input class="filtro" type="radio" name="categoria" value="video"> Placa de Video </label> <br>
-              <label for="almacenamiento"><input class="filtro" type="radio" name="categoria" value="Almacenamiento"> Almacenamiento </label> <br>
-              <label for="fuente"><input class="filtro" type="radio" name="categoria" value="Fuente"> Fuente de poder </label> <br>
-              <label for="gabinete"><input class="filtro" type="radio" name="categoria" value="Gabinete"> Gabinete </label> <br>
-              <label for="auriculares"><input class="filtro" type="radio" name="categoria" value="Auriculares"> Auriculares </label> <br>
-              <label for="teclado"><input class="filtro" type="radio" name="categoria" value="Teclado"> Teclado </label> <br>
-              <label for="mouse"><input class="filtro" type="radio" name="categoria" value="Mouse"> Mouse </label> <br>
+              <label for="procesador"><input class="filtro" type="radio" name="categoria" value="Procesador"> Procesador </label> 
+              <label for="motherboard"><input class="filtro" type="radio" name="categoria" value="Motherboard"> Motherboard </label> 
+              <label for="cooler"><input class="filtro" type="radio" name="categoria" value="Cooler"> Cooler </label> 
+              <label for="ram"><input class="filtro" type="radio" name="categoria" value="Ram"> Memoria RAM </label> 
+              <label for="video"><input class="filtro" type="radio" name="categoria" value="video"> Placa de Video </label> 
+              <label for="almacenamiento"><input class="filtro" type="radio" name="categoria" value="Almacenamiento"> Almacenamiento </label> 
+              <label for="fuente"><input class="filtro" type="radio" name="categoria" value="Fuente"> Fuente de poder </label> 
+              <label for="gabinete"><input class="filtro" type="radio" name="categoria" value="Gabinete"> Gabinete </label> 
+              <label for="auriculares"><input class="filtro" type="radio" name="categoria" value="Auriculares"> Auriculares </label> 
+              <label for="teclado"><input class="filtro" type="radio" name="categoria" value="Teclado"> Teclado </label> 
+              <label for="mouse"><input class="filtro" type="radio" name="categoria" value="Mouse"> Mouse </label> 
           </div>
           <div>
             <button>Limpiar filtro</button>
@@ -149,7 +151,6 @@
       <div id="productos">
         <!-- Productos generados desde js -->
       </div>
-
     </div>
 
     </main>
@@ -191,6 +192,10 @@
             </div>
           </div>
       </div>
+
+      <div class="miInfo">
+        <p>Proyecto creado por María Trinidad Quiroz para el curso de JavaScript de Coderhouse, Octubre 2022 <i class="fa-solid fa-heart fa-2xs"></i> </p>
+      </div>
     </footer>
 
 
@@ -208,5 +213,6 @@
       new WOW().init();
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

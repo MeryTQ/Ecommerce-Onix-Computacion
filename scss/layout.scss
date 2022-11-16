@@ -4,18 +4,21 @@
     box-sizing: border-box;
 }
 body{
-    h1{
-        font-family: "Quicksand";
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 0; padding: 0.8rem;
-        color: white;
-        background-color: #222325;
-        border-bottom: 1px solid black;
+    .h1{
+        margin: 0;
+        h1{
+            font-family: "Quicksand";
+            font-size: 70%;
+            text-align: center;
+            margin: 0; padding: 0.5rem;
+            color: white;
+            background-color: #222325;
+            border-bottom: 1px solid black;
+        }
     }
     h2{
         font-family: "Quicksand";
-        font-size: 1.2rem;
+        font-size: 100%;
         font-weight: bold;
     }
     h3{
@@ -33,6 +36,8 @@ body{
         color: white;
         font-size: 0.9rem;
         text-decoration: none;
+        margin: 0; padding: 0.5rem;                
+
     }
     main{
         background-image: url("../assets/Layout/Background.png");
@@ -51,17 +56,15 @@ header{
     justify-content: space-between;
     background-color: #ffffff;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.5rem 3% 0.5rem 3%;
     border-bottom: 1px solid #222325;
     position: sticky;
     top: 0;
     z-index: 1;
     img{
-        width: 13rem;
-        padding-left: 3rem;
+        width: 10rem;
     }
     .buscar{
-        padding: 5px;
         .buscarDiv>input{
             width: 20vw; height: 2.3rem;
             padding: 0 10px;
@@ -70,7 +73,7 @@ header{
         }
         .buscarLista{
             background-color: #ffffff;
-            top: 3.1rem;
+            top: 3.2rem;
             width: 20vw;
             align-self: flex-start;
             position: fixed;
@@ -90,7 +93,6 @@ header{
     }
     .carritoIcon{
         display: flex;
-        padding-right: 3rem;
         .contador{
             background-color: orange;
             height: 1.5rem; width: 1.5rem;
@@ -129,9 +131,8 @@ header{
             color: white;
             width: 100%;
             text-align: center;
-            margin: 0;
+            margin: 0; padding-top: 0.5rem;
             align-self: center;
-            padding-top: 0.5rem;
         }
     }
     .sad{
@@ -171,27 +172,33 @@ header{
     }
     .total{
         color: white;
-        margin: 2rem;
+        margin: 5%;
         display: flex;
+        align-items: center;
         p{
             width: 50%;
+            margin: 0;
+            font-weight: bold;
         }
-        div{
+        .pagar{
             width: 50%;
             display: flex;
             justify-content: flex-end;
-            input{
-                background-color: #10c237;
-                color: #000000;
-                border: none;
-                padding:  0rem 0.6rem 0rem 0.6rem;
-                border-radius: 0.7rem;
-                font-weight: bold;
-                height: 2.2rem;
-                transition: 0.5s;
-                &:hover{
-                    color: white;
-                    
+            a{
+                padding: 0;
+                input{
+                    background-color: #10c237;
+                    color: #000000;
+                    border: none;
+                    padding:  0rem 0.6rem 0rem 0.6rem;
+                    border-radius: 0.7rem;
+                    font-weight: bold;
+                    height: 2.2rem;
+                    transition: 0.5s;
+                    &:hover{
+                        color: white;
+                        
+                    }
                 }
             }
         }
@@ -245,21 +252,21 @@ nav{
 footer{
     background-color:  #222325;
     height: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
     display: grid;
     grid-template-areas: 
-    "menu marcas marcas redes";
+    "menu marcas marcas redes"
+    "info info info info";
     align-items: center;
     .menu{
         grid-area: menu;
         div{
-            padding: 0;
-            margin: 0;
             display: flex;
             flex-direction: column;
             a{
                 color: white;
                 transition: 0.4s;
+                padding-bottom: 0.5rem;
                 &:hover{
                     color: orange;
                 }
@@ -269,13 +276,15 @@ footer{
     .marcas{
         grid-area: marcas;
         justify-self: center;
+        width: 100%;
         div{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            width: 100%;
             align-items: center;
+            justify-items: center;
             img{
-                width: 9em;
-                padding: 2em;
+                width: 5rem;
             }
         }
     }
@@ -288,7 +297,7 @@ footer{
             justify-content: center;
             .logo{
                 img{
-                    width: 11rem;
+                    width: 10rem;
                 }
             }
             .redes{
@@ -304,6 +313,14 @@ footer{
                     }
                 }
             }
+        }
+    }
+    .miInfo{
+        grid-area: info;
+        p{
+            color: silver;
+            text-align: center;
+            font-size: 0.6rem;
         }
     }
 }
